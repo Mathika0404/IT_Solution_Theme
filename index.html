@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education Website</title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="icon" href="./images/image.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+  <!-- LOGIN MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- TITLE -->
+    <h2 id="formTitle">Client Login</h2>
+    <p id="formSubtitle">Access your IT services dashboard</p>
+
+    <form id="authForm">
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="text" id="companyName" placeholder="Company Name" style="display:none;">
+
+      <!-- COMMON FIELDS -->
+      <input type="email" placeholder="Company Email" required>
+      <input type="text" placeholder="Client ID / Project Code" required>
+
+      <!-- PASSWORD -->
+      <div class="password-field">
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <i class="fa-solid fa-eye toggle-eye" id="eyeIcon"
+           onclick="togglePassword()"></i>
+      </div>
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="password" id="confirmPassword"
+             placeholder="Confirm Password" style="display:none;">
+
+      <button type="submit" class="login-submit" id="submitBtn">Login</button>
+
+    </form>
+
+    <!-- SWITCH LINK -->
+    <p class="switch-text">
+      <span id="switchText">Don’t have an account?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Sign up</a>
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- NAVBAR START -->
+ <header>
+<nav class="navbar">
+
+  <div class="nav__header">
+    <div class="nav__logo">
+      <a href="index.html">
+        <img src="./images/stackly_logo.webp" alt="logo" class="logo-img">
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="nav__menu__btn" id="menu-btn">
+      <i class="ri-menu-line"></i>
+    </div>
+  </div>
+
+  <ul class="nav__links" id="nav-links">
+
+    <!-- HOME DROPDOWN -->
+    <li class="dropdown">
+      <a href="index.html">Home</a>
+      <i class="ri-arrow-down-s-line arrow"></i>
+
+      <ul class="dropdown-menu">
+        <li><a href="404.html">Home Page 2</a></li>
+      </ul>
+    </li>
+                <li><a href="404.html">about</a></li>
+                <li><a href="404.html">services</a></li>
+                <li><a href="404.html">contact</a></li>
+                <li><a href="javascript:void(0)" onclick="openLogin()">Login</a></li>
+                <li><a href="404.html">Dashboard</a></li>
+                
+  </ul>
+</nav>
+ </header>
+<!-- NAVBAR END -->
+
+  <section id="home" class="home">
+      <h2>Transform Your Business Online</h2>
+      <h3>with our Professional IT Services</h3>
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+  </section>
+
+  <!--ABOUT SECTION-->
+<section id="about" class="about">
+
+  <h1 class="heading">About Us</h1>
+  <h2 class="sub-heading">We turn innovative ideas into reliable IT solutions!</h2>
+
+  <div class="row">
+
+    <div class="about-images">
+      <img src="images/about1.jpg" class="img-top" alt="">
+      <img src="images/about2.jpg" class="img-bottom" alt="">
+
+      <div class="experience-badge">
+        <h3>25+</h3>
+        <p>Years Experience</p>
+      </div>
+    </div>
+
+    <div class="content">
+  <p>
+    We are a team of passionate professionals dedicated to delivering innovative and reliable IT solutions for businesses of all sizes. Our services focus on building modern websites, scalable applications, and secure digital infrastructures that help organizations grow in today’s competitive environment. We believe technology should simplify processes, improve efficiency, and enhance customer experiences. By understanding each client’s unique needs, we design solutions that are practical, flexible, and future-ready. Our commitment to quality, security, and performance ensures that every project we deliver meets high industry standards. With continuous support and maintenance, we help businesses stay updated, protected, and prepared for future challenges.
+  </p>
+      <a href="404.html">
+        <button class="btn">Read More</button>
+      </a>
+    </div>
+
+  </div>
+
+</section>
+  <!--ABOUT SECTION END-->
+
+  <div class="pt-5 pb-5" style="background-color: #f2f2f2;">
+    <div class="container">
+      <div class="row">
+        <div class="section-head col-sm-12" id="service">
+          <h1>Our Services</h1>
+          <h2>We help you to build high-quality IT solutions
+          </h2>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-laptop"></i></span>
+            <h6>Web App Development</h6>
+            <p>Our Custom Web Development Services Include Both Front-End And Back-End Development. Whether It Is Enhancing An Existing App Or Architecting An Enterprise App, Our Developers Are Up For The Challenge.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="item"> <span class="icon feature_box_col_two"><i class="fa-brands fa-android"></i></span>
+            <h6>Mobile App Development</h6>
+            <p>We Have Expertise In Creating Multi-Platform Mobile App Solutions For Both Android And IOS Devices. Using PhoneGap, Xamarin, And React Native, We Offer Custom Mobile App That Runs Smoothly On Multiple Platforms.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="item"> <span class="icon feature_box_col_three"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <h6>Digital Marketing</h6>
+            <p>The digital marketing services that we provide have their own set of charms. By taking our digital marketing services, our clients will be able to increase visibility and engage with their customers at the online platform.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <section class="counters">
+    <div class="container">
+        <div>
+            <i class="far fa-clock fa-4x"></i>
+            <div class="counter" data-target="13500">0</div>
+            <h3>Working Hours</h3>
+        </div>
+        <div>
+            <i class="fas fa-gift fa-4x"></i>
+            <div class="counter" data-target="720">0</div>
+            <h3>Completed Projects</h3>
+        </div>
+        <div>
+            <i class="fas fa-users fa-4x"></i>
+            <div class="counter" data-target="480">0</div>
+            <h3>Happy Clients</h3>
+        </div>
+        <div>
+            <i class="fas fa-award fa-4x"></i>
+            <div class="counter" data-target="120">0</div>
+            <h3>Awards Received</h3>
+        </div>
+    </div>
+</section>
+
+<section>
+<div class="clients mt-100">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Clients</h2>
+            <p>
+                We don't just build softwares, we build your business.
+            </p>
+        
+        <div class="owl-carousel clients-carousel">
+            <img src="./images/client1.jpg" alt="Client Logo">
+            <img src="./images/client2.jpg" alt="Client Logo">
+            <img src="./images/client3.jpg" alt="Client Logo">
+            <img src="./images/client4.jpg" alt="Client Logo">
+            <img src="./images/client5.jpg" alt="Client Logo">
+        </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="faq" id="faq">
+
+  <!-- SECTION HEADING -->
+  <div class="section-heading">
+    <h2 class="bracket-title">FAQ</h2>
+    <p class="section-subtitle">
+      Answers to common questions about our IT solutions and services
+    </p>
+  </div>
+
+  <!-- FAQ CONTAINER -->
+  <div class="faq-container">
+
+    <!-- FAQ ITEM 1 -->
+    <div class="accordion">
+      <div class="accordion-header">
+        <h3>How much will it cost?</h3>
+        <span>+</span>
+      </div>
+      <div class="accordion-body">
+        <p>
+          To estimate the cost, we first understand your project requirements,
+          features, and design needs. After an initial discussion, we provide
+          a ballpark estimate followed by a detailed quote.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ ITEM 2 -->
+    <div class="accordion">
+      <div class="accordion-header">
+        <h3>How long does it take to design a project?</h3>
+        <span>+</span>
+      </div>
+      <div class="accordion-body">
+        <p>
+          Project timelines depend on complexity and content availability.
+          Small projects may take a few weeks, while larger systems take longer.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ ITEM 3 -->
+    <div class="accordion">
+      <div class="accordion-header">
+        <h3>How can I associate with your IT company?</h3>
+        <span>+</span>
+      </div>
+      <div class="accordion-body">
+        <p>
+          Simply contact us with your requirements. After discussion, we suggest
+          the best engagement model and start development once finalized.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ ITEM 4 -->
+    <div class="accordion">
+      <div class="accordion-header">
+        <h3>Can you improve my existing website?</h3>
+        <span>+</span>
+      </div>
+      <div class="accordion-body">
+        <p>
+          Yes. We can redesign your current website to give it a modern,
+          professional look with improved performance and user experience.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ ITEM 5 -->
+    <div class="accordion">
+      <div class="accordion-header">
+        <h3>What are your payment terms?</h3>
+        <span>+</span>
+      </div>
+      <div class="accordion-body">
+        <p>
+          Payments are usually divided into milestones—initial, mid-project,
+          and final delivery. We accept online payments and major credit cards.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ ITEM 6 -->
+<div class="accordion">
+  <div class="accordion-header">
+    <h3>Do you provide post-launch support and maintenance?</h3>
+    <span>+</span>
+  </div>
+  <div class="accordion-body">
+    <p>
+      Yes. We offer ongoing support and maintenance services including bug fixes,
+      performance optimization, security updates, and feature enhancements to
+      ensure your IT solution runs smoothly after launch.
+    </p>
+  </div>
+</div>
+  </div>
+</section>
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery/jquery-migrate.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+<section id="contact" class="contact" style="background-color: #f2f2f2;">
+    <h1 class="heading">get in touch</h1>
+
+<div class="contact-in">
+    <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30711243.17762776!2d64.4398422293091!3d20.011408266548177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1644684739958!5m2!1sen!2sin" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="contact-form">
+<form action="404.html" method="GET">
+    <input type="text" name="name" placeholder="Name" class="contact-form-txt" required>
+
+    <input type="tel" id="phone" name="phone"
+           pattern="[0-9]{10}" maxlength="10"
+           placeholder="Contact number"
+           class="contact-form-phone" required>
+
+    <input type="email" name="email" placeholder="Email"
+           class="contact-form-email" required>
+
+    <textarea placeholder="Your Message" name="message"
+              class="contact-form-txtarea" required></textarea>
+
+    <input type="submit" value="Submit" name="submit"
+           class="contact-form-btn">
+</form>
+
+    </div>
+    </div>
+</section>
+
+<footer class="modern-footer">
+
+  <div class="footer-content">
+
+    <!-- Brand -->
+    <div class="footer-col brand">
+      <h2>STACKLY</h2>
+      <p>
+        We deliver modern IT solutions that help businesses grow online.
+        Our services include web development, cloud solutions, and digital innovation.
+      </p>
+    </div>
+
+    <!-- Company -->
+    <div class="footer-col">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="404.html">About</a></li>
+        <li><a href="404.html">Services</a></li>
+        <li><a href="404.html">Contact</a></li>
+        <li><a href="404.html">Login</a></li>
+        <li><a href="404.html">Dashboard</a></li>
+      </ul>
+    </div>
+
+    <!-- Design -->
+    <div class="footer-col">
+      <h4>Design</h4>
+      <ul>
+        <li><a href="404.html">Design Process</a></li>
+        <li><a href="404.html">Find a Designer</a></li>
+        <li><a href="404.html">Discover Inspiration</a></li>
+        <li><a href="404.html">Pricing</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="404.html">Blog</a></li>
+        <li><a href="404.html">Support</a></li>
+        <li><a href="404.html">Design & Branding</a></li>
+        <li><a href="404.html">FAQs</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h4>Social Media</h4>
+      <div class="social-icons">
+        <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Curved Bottom -->
+  <div class="footer-bottom">
+    <p>© All rights reserved 2025</p>
+  </div>
+<a href="index.html" class="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
