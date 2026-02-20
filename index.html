@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Education Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Solution Website</title>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +22,8 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
 
 </head>
 <body>
@@ -35,7 +37,7 @@
     <h2 id="formTitle">Client Login</h2>
     <p id="formSubtitle">Access your IT services dashboard</p>
 
-    <form id="authForm">
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
 
       <!-- SIGNUP ONLY FIELD -->
       <input type="text" id="companyName" placeholder="Company Name" style="display:none;">
@@ -45,11 +47,12 @@
       <input type="text" placeholder="Client ID / Project Code" required>
 
       <!-- PASSWORD -->
-      <div class="password-field">
-        <input type="password" id="loginPassword" placeholder="Password" required>
-        <i class="fa-solid fa-eye toggle-eye" id="eyeIcon"
-           onclick="togglePassword()"></i>
-      </div>
+<div class="password-field">
+  <input type="password" id="loginPassword" placeholder="Password" required>
+  <i class="fa-solid fa-eye-slash toggle-eye"
+     id="eyeIcon"
+     onclick="togglePassword()"></i>
+</div>
 
       <!-- SIGNUP ONLY FIELD -->
       <input type="password" id="confirmPassword"
@@ -71,42 +74,41 @@
 
 
 <!-- NAVBAR START -->
- <header>
-<nav class="navbar">
+<header>
+  <nav class="navbar">
 
-  <div class="nav__header">
-    <div class="nav__logo">
-      <a href="index.html">
-        <img src="./images/stackly_logo.webp" alt="logo" class="logo-img">
-      </a>
+    <div class="nav__header">
+      <!-- LOGO -->
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./images/stackly_logo.webp" alt="logo" class="logo-img">
+        </a>
+      </div>
+
+      <!-- BURGER MENU -->
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
     </div>
 
-    <!-- Mobile Menu Button -->
-    <div class="nav__menu__btn" id="menu-btn">
-      <i class="ri-menu-line"></i>
-    </div>
-  </div>
+    <!-- NAV LINKS -->
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="404.html">Home Page 2</a></li>
+        </ul>
+      </li>
+      <li><a href="404.html">about</a></li>
+      <li><a href="404.html">services</a></li>
+      <li><a href="404.html">contact</a></li>
+      <li><a href="javascript:void(0)" onclick="openLogin()">Login</a></li>
+      <li><a href="404.html">Dashboard</a></li>
+    </ul>
 
-  <ul class="nav__links" id="nav-links">
-
-    <!-- HOME DROPDOWN -->
-    <li class="dropdown">
-      <a href="index.html">Home</a>
-      <i class="ri-arrow-down-s-line arrow"></i>
-
-      <ul class="dropdown-menu">
-        <li><a href="404.html">Home Page 2</a></li>
-      </ul>
-    </li>
-                <li><a href="404.html">about</a></li>
-                <li><a href="404.html">services</a></li>
-                <li><a href="404.html">contact</a></li>
-                <li><a href="javascript:void(0)" onclick="openLogin()">Login</a></li>
-                <li><a href="404.html">Dashboard</a></li>
-                
-  </ul>
-</nav>
- </header>
+  </nav>
+</header>
 <!-- NAVBAR END -->
 
   <section id="home" class="home">
@@ -126,8 +128,8 @@
   <div class="row">
 
     <div class="about-images">
-      <img src="images/about1.jpg" class="img-top" alt="">
-      <img src="images/about2.jpg" class="img-bottom" alt="">
+      <img src="images/about1.jpg" class="img-top" alt="aboutimage">
+      <img src="images/about2.jpg" class="img-bottom" alt="aboutimage">
 
       <div class="experience-badge">
         <h3>25+</h3>
@@ -440,7 +442,30 @@
   <i class="fa-solid fa-arrow-up"></i>
 </a>
 </footer>
+<script>
+/* ================= DOM READY ================= */
+document.addEventListener("DOMContentLoaded", () => {
 
+  /* ================= MOBILE MENU ================= */
+  const menuBtn = document.getElementById("menu-btn");
+  const navLinks = document.getElementById("nav-links");
+
+  if (menuBtn && navLinks) {
+
+    const icon = menuBtn.querySelector("i");
+
+    menuBtn.addEventListener("click", () => {
+
+      const isOpen = navLinks.classList.toggle("open");
+
+      if (icon) {
+        icon.classList.toggle("ri-menu-line", !isOpen);
+        icon.classList.toggle("ri-close-line", isOpen);
+      }
+    });
+}
+});
+</script>
 <script src="script.js"></script>
 </body>
 </html>

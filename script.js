@@ -1,11 +1,12 @@
-// Change navbar styles on scroll
-window.addEventListener('scroll', () => {
-  const nav = document.querySelector('nav');
-  if (nav) {
-    nav.classList.toggle('window-scroll', window.scrollY > 0);
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
+
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
   }
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -31,38 +32,29 @@ document.addEventListener("DOMContentLoaded", () => {
   dropdownMenu.addEventListener("click", (e) => {
     e.stopPropagation();
   });
-
-  // Mobile menu
-  menuBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    navLinks.classList.toggle("open");
-    menuIcon.className = navLinks.classList.contains("open")
-      ? "ri-close-line"
-      : "ri-menu-line";
-  });
-
 });
 
-$(document).ready(function(){
 
-     $('.fa-bars').click(function(){
-        $(this).toggleClass('fa-times');
-        $('.navbar').toggleClass('nav-toggle');
-    });
+// $(document).ready(function(){
 
-    $(window).on('load scroll',function(){
-        $('.fa-bars').removeClass('fa-times');
-        $('.navbar').removeClass('nav-toggle');
+//      $('.fa-bars').click(function(){
+//         $(this).toggleClass('fa-times');
+//         $('.navbar').toggleClass('nav-toggle');
+//     });
 
-        if($(window).scrollTop()>35)
-        {
-            $('.header').css({'background':'#fff','box-shadow':'0 .2rem .5rem rgba(0,0,0,.4)'});
-        }
-        else
-        {
-            $('.header').css({'background':'none','box-shadow':'none'});
-        }
-    });
+//     $(window).on('load scroll',function(){
+//         $('.fa-bars').removeClass('fa-times');
+//         $('.navbar').removeClass('nav-toggle');
+
+//         if($(window).scrollTop()>35)
+//         {
+//             $('.header').css({'background':'#fff','box-shadow':'0 .2rem .5rem rgba(0,0,0,.4)'});
+//         }
+//         else
+//         {
+//             $('.header').css({'background':'none','box-shadow':'none'});
+//         }
+//     });
 
     const counters = document.querySelectorAll('.counter');
     const speed = 120;
@@ -119,7 +111,6 @@ $('.accordion-header').click(function(){
     $(this).children('span').text('-');
 });
 
-});
 
   const backToTop = document.querySelector('.back-to-top');
 
@@ -131,7 +122,7 @@ $('.accordion-header').click(function(){
     }
   });
 
- /* OPEN LOGIN MODAL */
+/* OPEN LOGIN MODAL */
 function openLogin(){
   document.getElementById("loginModal").style.display = "flex";
 }
@@ -146,16 +137,20 @@ function togglePassword(){
   const password = document.getElementById("loginPassword");
   const eyeIcon = document.getElementById("eyeIcon");
 
-  if(password.type === "password"){
-    password.type = "text";
-    eyeIcon.classList.remove("fa-eye");
-    eyeIcon.classList.add("fa-eye-slash");
-  } else {
-    password.type = "password";
+  // If eye is CLOSED → open it & show password
+  if (eyeIcon.classList.contains("fa-eye-slash")) {
+    password.type = "text";                 // show password
     eyeIcon.classList.remove("fa-eye-slash");
     eyeIcon.classList.add("fa-eye");
+  } 
+  // If eye is OPEN → close it & hide password
+  else {
+    password.type = "password";             // hide password
+    eyeIcon.classList.remove("fa-eye");
+    eyeIcon.classList.add("fa-eye-slash");
   }
 }
+
 
 /* LOGIN ↔ SIGNUP TOGGLE */
 let isSignup = false;
@@ -180,7 +175,6 @@ function toggleAuth(){
   document.querySelector(".switch-text a").innerText =
     isSignup ? "Login" : "Sign up";
 
-  /* SHOW / HIDE SIGNUP FIELDS */
   document.getElementById("companyName").style.display =
     isSignup ? "block" : "none";
 
@@ -188,26 +182,31 @@ function toggleAuth(){
     isSignup ? "block" : "none";
 }
 
-/* CLOSE WHEN CLICKING OUTSIDE */
-window.onclick = function(e){
+/* FORM SUBMIT → REDIRECT */
+function handleAuthSubmit(event){
+  event.preventDefault();
+  window.location.href = "404.html";
+}
+
+/* CLOSE MODAL ON OUTSIDE CLICK */
+window.addEventListener("click", function(e){
   const modal = document.getElementById("loginModal");
   if(e.target === modal){
     modal.style.display = "none";
   }
-}
+});
 
 const accordions = document.querySelectorAll(".accordion");
 
 accordions.forEach(acc => {
-  acc.querySelector(".accordion-header").addEventListener("click", () => {
+  const header = acc.querySelector(".accordion-header");
 
-    // close others (optional)
+  header.addEventListener("click", () => {
     accordions.forEach(item => {
       if(item !== acc){
         item.classList.remove("active");
       }
     });
-
     acc.classList.toggle("active");
   });
 });
