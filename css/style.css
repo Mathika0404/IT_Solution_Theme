@@ -981,12 +981,15 @@ header{
   margin-bottom: 40px;
 }
 
+.clients {
+  margin-top: -300px;
+}
+
 /* Clients container */
 .clients-carousel{
   display: grid;
   grid-template-columns: repeat(5, minmax(220px, 1fr));
   gap: 40px;
-
   justify-content: center;   
   justify-items: center;     
   align-items: center; 

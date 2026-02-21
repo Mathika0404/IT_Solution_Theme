@@ -210,3 +210,38 @@ accordions.forEach(acc => {
     acc.classList.toggle("active");
   });
 });
+
+$(document).ready(function () {
+  $(".clients-carousel").owlCarousel({
+    autoplay: true,
+    loop: true,
+    margin: 20,
+    dots: false,
+    responsive: {
+      0: { items: 2 },
+      768: { items: 3 },
+      1000: { items: 5 }
+    }
+  });
+});
+
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+  counter.innerText = '0';
+
+  const updateCounter = () => {
+    const target = +counter.getAttribute('data-target');
+    const c = +counter.innerText;
+    const increment = target / 200;
+
+    if (c < target) {
+      counter.innerText = `${Math.ceil(c + increment)}`;
+      setTimeout(updateCounter, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  updateCounter();
+});
