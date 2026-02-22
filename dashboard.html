@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="profile">
+      <div class="profile-img">
+        <img src="./images/team1.jpg" alt="User">
+      </div>
+      <h4>Nirmal Kumar P</h4>
+      <p>Admin</p>
+    </div>
+
+    <ul class="menu">
+      <li class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</li>
+      <li class="logout" onclick="logout()">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+      </li>
+    </ul>
+  </aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <h2>Welcome Nirmal!</h2>
+  <div class="top-icons">
+    <a href="404.html" class="icon-link">
+    <i class="fa-regular fa-bell"></i>
+    </a>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<div class="overview">
+  <h4 class="overview-title">System Overview</h4>
+  <div class="overview-cards">
+    <div class="overview-card"><div class="icon-box green"><i class="fa-solid fa-cube"></i></div><div><h3>120+</h3><p>Active Projects</p></div></div>
+    <div class="overview-card"><div class="icon-box blue"><i class="fa-solid fa-layer-group"></i></div><div><h3>2,859</h3><p>Service Requests</p></div></div>
+    <div class="overview-card"><div class="icon-box teal"><i class="fa-solid fa-chart-line"></i></div><div><h3>99.9%</h3><p>System Uptime</p></div></div>
+    <div class="overview-card"><div class="icon-box orange"><i class="fa-solid fa-box-open"></i></div><div><h3>12</h3><p>Critical Issues</p></div></div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-grid">
+
+<div class="stat-card users">
+  <h4>Active Clients</h4>
+  <div class="users-content">
+    <div class="users-icon"><i class="fa-solid fa-users"></i></div>
+    <h2>583+</h2>
+    <p>Enterprise Clients</p>
+  </div>
+</div>
+
+<div class="stat-card inventory">
+  <h4>Infrastructure Usage</h4>
+  <div class="inventory-content">
+    <div class="pie-chart"></div>
+    <div class="legend">
+      <div><span class="dot grey"></span>Used Resources</div>
+      <div><span class="dot blue"></span>Available Capacity</div>
+    </div>
+  </div>
+</div>
+
+<div class="stat-card tall">
+  <h4>Top IT Services</h4>
+  <div class="store-row"><span>Cloud Solutions</span><div class="bar"><span style="width:87%"></span></div></div>
+  <div class="store-row"><span>Web Development</span><div class="bar"><span style="width:72%"></span></div></div>
+  <div class="store-row"><span>Cybersecurity</span><div class="bar"><span style="width:59%"></span></div></div>
+  <div class="store-row">
+  <span>Cloud Migration</span>
+  <div class="bar">
+    <span style="width:68%"></span>
+  </div>
+</div>
+
+<div class="store-row">
+  <span>DevOps & Automation</span>
+  <div class="bar">
+    <span style="width:64%"></span>
+  </div>
+</div>
+
+<div class="store-row">
+  <span>Mobile App Development</span>
+  <div class="bar">
+    <span style="width:61%"></span>
+  </div>
+</div>
+
+<div class="store-row">
+  <span>IT Consulting</span>
+  <div class="bar">
+    <span style="width:58%"></span>
+  </div>
+</div>
+
+<div class="store-row">
+  <span>System Integration</span>
+  <div class="bar">
+    <span style="width:54%"></span>
+  </div>
+</div>
+
+<div class="store-row">
+  <span>Managed IT Support</span>
+  <div class="bar">
+    <span style="width:49%"></span>
+  </div>
+</div>
+
+<div class="store-row">
+  <span>Data Analytics & BI</span>
+  <div class="bar">
+    <span style="width:45%"></span>
+  </div>
+</div>
+</div>
+
+<div class="stat-card wide">
+  <div class="chart-header">
+    <h4>Revenue vs Growth</h4>
+    <span>Last 6 months</span>
+  </div>
+
+  <div class="sales-chart">
+    <div class="y-axis"><span>15K</span><span>10K</span><span>5K</span><span>0</span></div>
+
+    <svg viewBox="0 0 600 220" preserveAspectRatio="none">
+      <g class="grid">
+        <line x1="0" y1="40" x2="600" y2="40"/>
+        <line x1="0" y1="90" x2="600" y2="90"/>
+        <line x1="0" y1="140" x2="600" y2="140"/>
+        <line x1="0" y1="190" x2="600" y2="190"/>
+      </g>
+
+      <path d="M0,150 C80,140 160,130 240,120 320,110 400,100 480,95 600,85" class="line target"/>
+      <path d="M0,160 C80,120 160,150 240,80 320,140 400,60 480,120 600,80" class="line sales"/>
+    </svg>
+
+    <div class="x-axis"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div>
+  </div>
+</div>
+
+</div>
+</main>
+</div>
+</div>
+
+<script>
+    // Dark mode toggle
+const toggle = document.getElementById("modeToggle");
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  document.body.classList.toggle("light");
+});
+
+// Logout redirect
+function logout() {
+  window.location.href = "404.html";
+}
+</script>
+</body>
+</html>

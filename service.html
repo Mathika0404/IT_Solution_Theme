@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Solution Website</title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<!-- <link rel="stylesheet" href="./css/style.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="icon" href="./images/image.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="./css/service.css">
+
+
+</head>
+<body>
+  <!-- LOGIN MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- TITLE -->
+    <h2 id="formTitle">Client Login</h2>
+    <p id="formSubtitle">Access your IT services dashboard</p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="text" id="companyName" placeholder="Company Name" style="display:none;">
+
+      <!-- COMMON FIELDS -->
+      <input type="email" placeholder="Company Email" required>
+      <input type="text" placeholder="Client ID / Project Code" required>
+
+      <!-- PASSWORD -->
+<div class="password-field">
+  <input type="password" id="loginPassword" placeholder="Password" required>
+  <i class="fa-solid fa-eye-slash toggle-eye"
+     id="eyeIcon"
+     onclick="togglePassword()"></i>
+</div>
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="password" id="confirmPassword"
+             placeholder="Confirm Password" style="display:none;">
+
+      <button type="submit" class="login-submit" id="submitBtn">Login</button>
+
+    </form>
+
+    <!-- SWITCH LINK -->
+    <p class="switch-text">
+      <span id="switchText">Don’t have an account?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Sign up</a>
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- NAVBAR START -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <!-- LOGO -->
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./images/stackly_logo.webp" alt="logo" class="logo-img">
+        </a>
+      </div>
+
+      <!-- BURGER MENU -->
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <!-- NAV LINKS -->
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="index2.html">Home Page 2</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="service.html">services</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li><a href="javascript:void(0)" onclick="openLogin()">Login</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+
+  </nav>
+</header>
+<!-- NAVBAR END -->
+
+  <section id="home" class="home">
+      <h2>Home / Service</h2>
+      <h3>Your success is our service commitment!</h3>
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+  </section>
+
+  <!--SERVICE SECTION-->
+  <section class="it-service-cards">
+
+<div class="section-header">
+  <span class="section-tag">OUR SERVICES</span>
+  <h2>Smart IT Services That Power Your Business</h2>
+</div>
+  <div class="cards-grid">
+
+    <!-- Card 1 -->
+    <div class="service-card">
+      <div class="icon-circle">
+        <!-- Code Icon -->
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M8 9L4 12L8 15M16 9L20 12L16 15" />
+          <path d="M14 4L10 20" />
+        </svg>
+      </div>
+      <h4>Software Development</h4>
+      <p>Custom applications built with scalable and secure technologies.</p>
+      <a href="404.html" class="btn-read">Read More</a>
+    </div>
+
+    <!-- Card 2 (Featured) -->
+    <div class="service-card featured">
+      <div class="icon-circle">
+        <!-- Cloud Icon -->
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M7 18H18A4 4 0 0 0 18 10A5 5 0 0 0 8 9A3 3 0 0 0 7 18Z"/>
+        </svg>
+      </div>
+      <h4>Cloud Solutions</h4>
+      <p>Reliable cloud infrastructure, migration, and management services.</p>
+      <a href="404.html" class="btn-read">Read More</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="service-card">
+      <div class="icon-circle">
+        <!-- Shield Icon -->
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 3L19 6V11C19 16 15 20 12 21C9 20 5 16 5 11V6L12 3Z"/>
+        </svg>
+      </div>
+      <h4>Cybersecurity</h4>
+      <p>Protect systems and data with advanced security solutions.</p>
+      <a href="404.html" class="btn-read">Read More</a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="service-card">
+      <div class="icon-circle">
+        <!-- Chart Icon -->
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M4 20V10M10 20V4M16 20V14M22 20H2"/>
+        </svg>
+      </div>
+      <h4>IT Consulting</h4>
+      <p>Expert guidance to align technology with business strategy.</p>
+      <a href="404.html" class="btn-read">Read More</a>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="service-card">
+      <div class="icon-circle">
+        <!-- Gear Icon -->
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 8A4 4 0 1 0 12 16A4 4 0 1 0 12 8Z"/>
+          <path d="M2 12H6M18 12H22M12 2V6M12 18V22"/>
+        </svg>
+      </div>
+      <h4>System Integration</h4>
+      <p>Seamless integration of platforms and enterprise tools.</p>
+      <a href="404.html" class="btn-read">Read More</a>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="service-card">
+      <div class="icon-circle">
+        <!-- Headset Icon -->
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M4 12A8 8 0 0 1 20 12"/>
+          <path d="M4 12V16H8V12M20 12V16H16V12"/>
+        </svg>
+      </div>
+      <h4>IT Support</h4>
+      <p>24/7 monitoring, maintenance, and technical support.</p>
+      <a href="404.html" class="btn-read">Read More</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMMUNICATE / CTA SECTION -->
+<section class="communicate">
+  <div class="communicate-content">
+    <h3>Let’s Build Smart IT Solutions Together</h3>
+    <p>Have an idea or project in mind? Our team is ready to help.</p>
+    <a href="contact.html" class="btn">Contact Now</a>
+  </div>
+</section>
+
+
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials">
+  <div class="container">
+
+    <!-- SECTION HEADER -->
+    <div class="section-header center">
+      <span class="section-tag">TESTIMONIALS</span>
+      <h2>What Our Clients Say About Us</h2>
+      <p>Trusted by businesses for delivering reliable IT solutions</p>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="owl-carousel testimonials-carousel">
+
+      <!-- ITEM -->
+      <div class="testimonial-card">
+        <div class="testimonial-img">
+          <img src="./images/testimonal1.jpg" alt="Client">
+        </div>
+        <p class="testimonial-text">
+          The IT solutions provided were reliable, scalable, and perfectly aligned
+          with our business needs.
+        </p>
+<div class="testimonial-socials">
+  <a href="404.html" class="fab fa-facebook-f"></a>
+  <a href="404.html" class="fab fa-twitter"></a>
+  <a href="404.html" class="fab fa-instagram"></a>
+  <a href="404.html" class="fab fa-linkedin-in"></a>
+</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-img">
+          <img src="./images/testimonal2.jpg" alt="Client">
+        </div>
+        <p class="testimonial-text">
+          Professional team with excellent technical expertise and outstanding
+          support throughout the project.
+        </p>
+<div class="testimonial-socials">
+  <a href="404.html" class="fab fa-facebook-f"></a>
+  <a href="404.html" class="fab fa-twitter"></a>
+  <a href="404.html" class="fab fa-instagram"></a>
+  <a href="404.html" class="fab fa-linkedin-in"></a>
+</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-img">
+          <img src="./images/testimonal3.jpg" alt="Client">
+        </div>
+        <p class="testimonial-text">
+          They transformed our ideas into a powerful digital solution that helped
+          us scale faster.
+        </p>
+<div class="testimonial-socials">
+  <a href="404.html" class="fab fa-facebook-f"></a>
+  <a href="404.html" class="fab fa-twitter"></a>
+  <a href="404.html" class="fab fa-instagram"></a>
+  <a href="404.html" class="fab fa-linkedin-in"></a>
+</div>
+      </div>
+
+            <div class="testimonial-card">
+        <div class="testimonial-img">
+          <img src="./images/client3.jpg" alt="Client">
+        </div>
+        <p class="testimonial-text">
+          Professional team with excellent technical expertise and outstanding
+          support throughout the project.
+        </p>
+<div class="testimonial-socials">
+  <a href="404.html" class="fab fa-facebook-f"></a>
+  <a href="404.html" class="fab fa-twitter"></a>
+  <a href="404.html" class="fab fa-instagram"></a>
+  <a href="404.html" class="fab fa-linkedin-in"></a>
+</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery/jquery-migrate.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<!--FOOTER SECTION-->
+<footer class="modern-footer">
+
+  <div class="footer-content">
+
+    <!-- Brand -->
+    <div class="footer-col brand">
+      <h2>STACKLY</h2>
+      <p>
+        We deliver modern IT solutions that help businesses grow online.
+        Our services include web development, cloud solutions, and digital innovation.
+      </p>
+    </div>
+
+    <!-- Company -->
+    <div class="footer-col">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="404.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Design -->
+    <div class="footer-col">
+      <h4>Design</h4>
+      <ul>
+        <li><a href="404.html">Design Process</a></li>
+        <li><a href="404.html">Find a Designer</a></li>
+        <li><a href="404.html">Discover Inspiration</a></li>
+        <li><a href="404.html">Pricing</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="404.html">Blog</a></li>
+        <li><a href="404.html">Support</a></li>
+        <li><a href="404.html">Design & Branding</a></li>
+        <li><a href="404.html">FAQs</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h4>Social Media</h4>
+      <div class="social-icons">
+        <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Curved Bottom -->
+  <div class="footer-bottom">
+    <p>© All rights reserved 2025</p>
+  </div>
+</footer>
+
+<script>
+/* ================= DOM READY ================= */
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ================= MOBILE MENU ================= */
+  const menuBtn = document.getElementById("menu-btn");
+  const navLinks = document.getElementById("nav-links");
+
+  if (menuBtn && navLinks) {
+
+    const icon = menuBtn.querySelector("i");
+
+    menuBtn.addEventListener("click", () => {
+
+      const isOpen = navLinks.classList.toggle("open");
+
+      if (icon) {
+        icon.classList.toggle("ri-menu-line", !isOpen);
+        icon.classList.toggle("ri-close-line", isOpen);
+      }
+    });
+}
+});
+
+/* OPEN LOGIN MODAL */
+function openLogin(){
+  document.getElementById("loginModal").style.display = "flex";
+}
+
+/* CLOSE LOGIN MODAL */
+function closeLogin(){
+  document.getElementById("loginModal").style.display = "none";
+}
+
+/* PASSWORD SHOW / HIDE */
+function togglePassword(){
+  const password = document.getElementById("loginPassword");
+  const eyeIcon = document.getElementById("eyeIcon");
+
+  // If eye is CLOSED → open it & show password
+  if (eyeIcon.classList.contains("fa-eye-slash")) {
+    password.type = "text";                 // show password
+    eyeIcon.classList.remove("fa-eye-slash");
+    eyeIcon.classList.add("fa-eye");
+  } 
+  // If eye is OPEN → close it & hide password
+  else {
+    password.type = "password";             // hide password
+    eyeIcon.classList.remove("fa-eye");
+    eyeIcon.classList.add("fa-eye-slash");
+  }
+}
+
+
+/* LOGIN ↔ SIGNUP TOGGLE */
+let isSignup = false;
+
+function toggleAuth(){
+  isSignup = !isSignup;
+
+  document.getElementById("formTitle").innerText =
+    isSignup ? "Create Account" : "Client Login";
+
+  document.getElementById("formSubtitle").innerText =
+    isSignup ? "Register for IT services access"
+             : "Access your IT services dashboard";
+
+  document.getElementById("submitBtn").innerText =
+    isSignup ? "Sign Up" : "Login";
+
+  document.getElementById("switchText").innerText =
+    isSignup ? "Already have an account?"
+             : "Don’t have an account?";
+
+  document.querySelector(".switch-text a").innerText =
+    isSignup ? "Login" : "Sign up";
+
+  document.getElementById("companyName").style.display =
+    isSignup ? "block" : "none";
+
+  document.getElementById("confirmPassword").style.display =
+    isSignup ? "block" : "none";
+}
+
+/* FORM SUBMIT → REDIRECT */
+function handleAuthSubmit(event){
+  event.preventDefault();
+  window.location.href = "404.html";
+}
+
+/* CLOSE MODAL ON OUTSIDE CLICK */
+window.addEventListener("click", function(e){
+  const modal = document.getElementById("loginModal");
+  if(e.target === modal){
+    modal.style.display = "none";
+  }
+});
+</script>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
