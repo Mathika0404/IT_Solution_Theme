@@ -23,7 +23,7 @@
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="./css/about.css">
+<link rel="stylesheet" href="./css/career.css">
 
 
 </head>
@@ -81,7 +81,7 @@
     <div class="nav__header">
       <!-- LOGO -->
       <div class="nav__logo">
-        <a href="index.html">
+        <a href="index2.html">
           <img src="./images/stackly_logo.webp" alt="logo" class="logo-img">
         </a>
       </div>
@@ -98,14 +98,12 @@
         <a href="index.html">Home</a>
         <i class="ri-arrow-down-s-line arrow"></i>
         <ul class="dropdown-menu">
-          <li><a href="index2.html">Home Page 2</a></li>
+          <li><a href="index.html">Home Page 1</a></li>
         </ul>
       </li>
-      <li><a href="about.html">about</a></li>
-      <li><a href="service.html">services</a></li>
-      <li><a href="contact.html">contact</a></li>
-      <li><a href="javascript:void(0)" onclick="openLogin()">Login</a></li>
-      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="career.html">Career</a></li>
+      <li><a href="contact2.html">contact</a></li>
     </ul>
 
   </nav>
@@ -113,115 +111,94 @@
 <!-- NAVBAR END -->
 
   <section id="home" class="home">
-      <h2>Home / About</h2>
-      <h3>Smart IT solutions for a digital world!</h3>
+      <h2>Home / Career</h2>
+      <h3>Growing IT careers with real-world solutions!</h3>
     <div class="wave wave1"></div>
     <div class="wave wave2"></div>
     <div class="wave wave3"></div>
   </section>
 
- <section class="it-about-style">
-  <div class="it-container">
 
-    <!-- IMAGE WITH BACKGROUND SHAPE -->
-    <div class="it-image-box">
-      <div class="bg-rectangle"></div>
-      <img src="./images/about1.webp" alt="IT Solutions Team">
+  <!--CAREER SECTION-->
+<section class="careers-section">
+  <div class="careers-container">
+
+    <!-- HEADER -->
+    <div class="careers-header">
+      <span class="bracket-heading">VACANCY / CAREER</span>
+      <h2>Join Our Team!</h2>
+      <p>Build your IT career with real-world projects and a future-focused team.</p>
     </div>
 
-    <!-- CONTENT -->
-    <div class="it-content">
-      <span class="small-title">ABOUT US</span>
-      <h2>Solve Business Challenges with Smart IT Solutions</h2>
-      <p>
-        We help businesses transform digitally by delivering secure,
-        scalable, and innovative IT solutions. Our expertise covers
-        web development, cloud services, system integration, and
-        enterprise-level support designed to meet real-world challenges.
-      </p>
-      <p>
-        From planning to deployment, we focus on performance, security,
-        and long-term growth—ensuring technology becomes your strongest asset.
-      </p>
+    <div class="careers-content">
 
-      <div class="it-buttons">
-        <a href="404.html" class="btn-primary">Learn More</a>
-        <a href="contact.html" class="btn-outline">Contact Us</a>
+      <!-- LEFT : JOB CARDS -->
+      <div class="jobs-grid">
+
+        <div class="job-card">
+          <span class="job-type">Full Time / Part Time</span>
+          <h4>Software Developer</h4>
+          <p>Work on scalable applications using modern technologies and frameworks.</p>
+          <a href="404.html" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <span class="job-type">Full Time</span>
+          <h4>System Administrator</h4>
+          <p>Manage infrastructure, servers, security, and enterprise IT systems.</p>
+          <a href="404.html" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <span class="job-type">Part Time</span>
+          <h4>IT Support Engineer</h4>
+          <p>Provide technical support, troubleshooting, and system maintenance.</p>
+          <a href="404.html" class="apply-btn">Apply Now</a>
+        </div>
+
+        <div class="job-card">
+          <span class="job-type">Full Time / Part Time</span>
+          <h4>QA Engineer</h4>
+          <p>Ensure software quality through testing, automation, and analysis.</p>
+          <a href="404.html" class="apply-btn">Apply Now</a>
+        </div>
+
       </div>
-    </div>
 
+      <!-- RIGHT : APPLICATION FORM -->
+      <div class="career-form">
+        <h3>Join Our Team</h3>
+
+<form id="careerForm" novalidate>
+  <div class="form-group">
+    <input type="text" id="name" placeholder="Your Name*">
+    <small class="error"></small>
+  </div>
+
+  <div class="form-group">
+    <input type="email" id="email" placeholder="Your Email*">
+    <small class="error"></small>
+  </div>
+
+  <div class="form-group">
+    <input type="text" id="position" placeholder="Position Applied For*">
+    <small class="error"></small>
+  </div>
+
+  <div class="form-group">
+    <textarea id="message" placeholder="Tell us about yourself*"></textarea>
+    <small class="error"></small>
+  </div>
+
+  <button type="submit">Send Application</button>
+</form>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<section class="it-workflow">
-
-  <!-- TOP HEADING -->
-  <div class="workflow-header">
-    <span class="workflow-tag">HOW IT WORKS</span>
-    <h2>Our Process Workflow</h2>
-  </div>
-
-  <!-- WORKFLOW GRID -->
-  <div class="workflow-grid">
-
-    <!-- LEFT STEPS (01–03) -->
-    <div class="workflow-col left">
-      <div class="step">
-        <span class="step-number">01</span>
-        <div>
-          <h4>Requirement Analysis</h4>
-          <p>We understand business goals and technical requirements.</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <span class="step-number">02</span>
-        <div>
-          <h4>Solution Planning</h4>
-          <p>We design scalable and secure IT architecture.</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <span class="step-number">03</span>
-        <div>
-          <h4>Development</h4>
-          <p>We build and integrate using modern technologies.</p>
-        </div>
-      </div>
-    </div>
-
-<!-- RIGHT COLUMN (IMAGE + 04–05 STEPS) -->
-<div class="workflow-col right">
-
-  <!-- IMAGE ON TOP -->
-  <div class="workflow-image">
-    <img src="./images/about_page_img.webp" alt="Workflow Illustration">
-  </div>
-
-  <!-- STEP 04 -->
-  <div class="step">
-    <span class="step-number">04</span>
-    <div>
-      <h4>Monitoring & Optimization</h4>
-      <p>We track performance and optimize continuously.</p>
-    </div>
-  </div>
-
-  <!-- STEP 05 -->
-  <div class="step">
-    <span class="step-number">05</span>
-    <div>
-      <h4>Support & Maintenance</h4>
-      <p>We provide long-term IT support and improvements.</p>
-    </div>
-  </div>
-
-</div>
-
-  </div>
-</section>
-
+<!--FOOTER SECTION-->
 <footer class="modern-footer">
 
   <div class="footer-content">
@@ -239,10 +216,10 @@
     <div class="footer-col">
       <h4>Links</h4>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="404.html">About</a></li>
-        <li><a href="404.html">Services</a></li>
-        <li><a href="404.html">Contact</a></li>
+        <li><a href="index2.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="contact2.html">Contact</a></li>
       </ul>
     </div>
 
@@ -285,9 +262,6 @@
   <div class="footer-bottom">
     <p>© All rights reserved 2025</p>
   </div>
-<a href="index.html" class="back-to-top" aria-label="Back to top">
-  <i class="fa-solid fa-arrow-up"></i>
-</a>
 </footer>
 
 <script>
@@ -314,79 +288,69 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 });
 
-/* OPEN LOGIN MODAL */
-function openLogin(){
-  document.getElementById("loginModal").style.display = "flex";
-}
 
-/* CLOSE LOGIN MODAL */
-function closeLogin(){
-  document.getElementById("loginModal").style.display = "none";
-}
+document.getElementById("careerForm").addEventListener("submit", function(e){
+  e.preventDefault();
 
-/* PASSWORD SHOW / HIDE */
-function togglePassword(){
-  const password = document.getElementById("loginPassword");
-  const eyeIcon = document.getElementById("eyeIcon");
+  let isValid = true;
 
-  // If eye is CLOSED → open it & show password
-  if (eyeIcon.classList.contains("fa-eye-slash")) {
-    password.type = "text";                 // show password
-    eyeIcon.classList.remove("fa-eye-slash");
-    eyeIcon.classList.add("fa-eye");
-  } 
-  // If eye is OPEN → close it & hide password
-  else {
-    password.type = "password";             // hide password
-    eyeIcon.classList.remove("fa-eye");
-    eyeIcon.classList.add("fa-eye-slash");
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const position = document.getElementById("position");
+  const message = document.getElementById("message");
+
+  clearErrors();
+
+  // Name validation
+  if(name.value.trim() === ""){
+    showError(name, "Name is required");
+    isValid = false;
   }
-}
 
+  // Email validation
+  if(email.value.trim() === ""){
+    showError(email, "Email is required");
+    isValid = false;
+  }else if(!isValidEmail(email.value)){
+    showError(email, "Enter a valid email address");
+    isValid = false;
+  }
 
-/* LOGIN ↔ SIGNUP TOGGLE */
-let isSignup = false;
+  // Position validation
+  if(position.value.trim() === ""){
+    showError(position, "Position is required");
+    isValid = false;
+  }
 
-function toggleAuth(){
-  isSignup = !isSignup;
+  // Message validation
+  if(message.value.trim() === ""){
+    showError(message, "Please tell us about yourself");
+    isValid = false;
+  }
 
-  document.getElementById("formTitle").innerText =
-    isSignup ? "Create Account" : "Client Login";
-
-  document.getElementById("formSubtitle").innerText =
-    isSignup ? "Register for IT services access"
-             : "Access your IT services dashboard";
-
-  document.getElementById("submitBtn").innerText =
-    isSignup ? "Sign Up" : "Login";
-
-  document.getElementById("switchText").innerText =
-    isSignup ? "Already have an account?"
-             : "Don’t have an account?";
-
-  document.querySelector(".switch-text a").innerText =
-    isSignup ? "Login" : "Sign up";
-
-  document.getElementById("companyName").style.display =
-    isSignup ? "block" : "none";
-
-  document.getElementById("confirmPassword").style.display =
-    isSignup ? "block" : "none";
-}
-
-/* FORM SUBMIT → REDIRECT */
-function handleAuthSubmit(event){
-  event.preventDefault();
-  window.location.href = "404.html";
-}
-
-/* CLOSE MODAL ON OUTSIDE CLICK */
-window.addEventListener("click", function(e){
-  const modal = document.getElementById("loginModal");
-  if(e.target === modal){
-    modal.style.display = "none";
+  // If all fields are valid → redirect
+  if(isValid){
+    window.location.href = "404.html";
   }
 });
+
+function showError(input, message){
+  const formGroup = input.parentElement;
+  formGroup.classList.add("error");
+  formGroup.querySelector("small").innerText = message;
+}
+
+function clearErrors(){
+  document.querySelectorAll(".form-group").forEach(group => {
+    group.classList.remove("error");
+    group.querySelector("small").innerText = "";
+  });
+}
+
+function isValidEmail(email){
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return pattern.test(email);
+}
 </script>
 
 <script src="./js/script.js"></script>

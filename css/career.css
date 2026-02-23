@@ -67,10 +67,10 @@ li {
     background: white;
     border-style: groove;
     border-color: #002e5f;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    height: 3rem;
-    width: 12rem;
+    height: 3.5rem;
+    width: 15rem;
     box-shadow: 0 .2rem .5rem rgba(0,0,0,.3);
 }
 
@@ -85,7 +85,7 @@ li {
     letter-spacing: .1rem;
     opacity: .9;
     color: white;
-    background: #002e5f;
+    background: #00bfff;
 }
 
 html, body {
@@ -138,11 +138,6 @@ body{
   }
 }
 
-.login-box h2,
-.login-box p {
-  color: #000;
-}
-
 /* CLOSE BUTTON */
 .close-btn{
   position: absolute;
@@ -150,7 +145,6 @@ body{
   right: 18px;
   font-size: 24px;
   cursor: pointer;
-  color: #000;
 }
 
 /* INPUTS */
@@ -634,390 +628,6 @@ header{
 
 }
 
-/* ================= SERVICES SECTION ================= */
-.it-service-cards {
-  padding: 90px 20px;
-  background: #ffffff;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* ================= SECTION HEADER ================= */
-.section-header {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-/* Span heading */
-.section-tag {
-  position: relative;
-  display: inline-block;   /* stays only as wide as text */
-  padding: 10px 28px;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  color: #333;
-  text-transform: uppercase;
-}
-
-.section-header h2 {
-  text-align: center;
-}
-
-/* Bracket corners */
-.section-tag::before,
-.section-tag::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border: 3px solid #333;
-}
-
-.section-tag::before {
-  top: 0;
-  left: 0;
-  border-right: none;
-  border-bottom: none;
-}
-
-.section-tag::after {
-  bottom: 0;
-  right: 0;
-  border-left: none;
-  border-top: none;
-}
-
-.section-header h2 {
-  display: block;        /* forces next line */
-  margin-top: -70px;      /* space below span */
-  font-size: 36px;
-  color: #000;
-  margin-left: 100px;
-}
-
-/* Safety: no brackets on h2 */
-.section-header h2::before,
-.section-header h2::after {
-  content: none !important;
-}
-
-/* ================= GRID ================= */
-.cards-grid {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-/* ================= SERVICE CARD ================= */
-.service-card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 16px;
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
-
-/* CARD HOVER */
-.service-card:hover {
-  background: #174779;
-}
-
-/* TEXT COLOR CHANGE ON HOVER */
-.service-card:hover h4,
-.service-card:hover p,
-.service-card:hover a {
-  color: #ffffff;
-}
-
-/* OPTIONAL: button background change */
-.service-card:hover .btn-read {
-  background: #ffffff;
-  color: #174779;
-}
-
-/* NORMAL TEXT */
-.service-card h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #000;
-  transition: color 0.3s ease;
-}
-
-.service-card p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 18px;
-  transition: color 0.3s ease;
-}
-
-
-/* ================= ICON ================= */
-.icon-circle {
-  width: 46px;
-  height: 46px;
-  background: #f3c1da;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-}
-
-.icon-circle svg {
-  width: 22px;
-  height: 22px;
-  stroke: #6a11cb;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-/* ================= BUTTON ================= */
-/* BUTTON */
-.btn-read {
-  display: inline-block;
-  padding: 8px 18px;
-  background: #174779;
-  color: #ffffff;
-  border-radius: 8px;
-  font-size: 13px;
-  text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-/* ================= FEATURED CARD ================= */
-.service-card.featured {
-  background: #b98bfd;
-  color: #fff;
-  transform: translateY(-12px);
-}
-
-.service-card.featured p {
-  color: #f3eaff;
-}
-
-.service-card.featured .icon-circle {
-  background: #6a11cb;
-}
-
-.service-card.featured svg {
-  stroke: #ffffff;
-}
-
-/* ================= HOVER ================= */
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 900px) {
-  .cards-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-card.featured {
-    transform: none;
-  }
-}
-
-.communicate {
-  background-image: url(../images/img3.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 35vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 60px 20px;
-  color: #fff;
-}
-
-.communicate-content h3 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.communicate-content p {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* TESTIMONIALS SECTION */
-.testimonials {
-  padding: 90px 0;
-  background: #f6f7fb;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* FORCE OWL CAROUSEL TO SHOW WITHOUT JS */
-.owl-carousel {
-  display: block !important;
-}
-
-.owl-carousel .owl-stage{
-  display: contents !important;
-}
-
-.owl-carousel .owl-item{
-  width: auto !important;
-  display: block !important;
-}
-
-/* HEADER */
-.section-header.center {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.section-tag {
-  position: relative;
-  display: inline-block;
-  padding: 8px 26px;
-  font-size: 13px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #000;
-}
-
-/* Brackets */
-.section-tag::before,
-.section-tag::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border: 3px solid #000;
-}
-
-.section-tag::before {
-  top: 0;
-  left: 0;
-  border-right: none;
-  border-bottom: none;
-}
-
-.section-tag::after {
-  bottom: 0;
-  right: 0;
-  border-left: none;
-  border-top: none;
-}
-
-.section-header h2 {
-  font-size: 36px;
-  margin-top: -50px;
-}
-
-.section-header p {
-  font-size: 16px;
-  color: #666;
-}
-
-/* TESTIMONIAL CARD */
-
-.testimonials-carousel{
-  display: grid !important;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  gap: 20px; /* small spacing */
-  padding: 10px 20px; /* small inner padding */
-}
-
-.testimonial-card {
-  background: #fff;
-  padding: 15px 10px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-}
-
-/* IMAGE FIX */
-.testimonial-img {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 20px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid #275f9b;
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.70);
-}
-
-.testimonial-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* TEXT */
-.testimonial-text {
-  font-size: 15px;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.testimonial-card h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.testimonial-card span {
-  font-size: 13px;
-  color: #00bfff;
-  text-transform: uppercase;
-}
-
-/* OWL DOTS */
-.testimonials .owl-dot {
-  width: 12px;
-  height: 12px;
-  background: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-}
-
-.testimonials .owl-dot.active {
-  background: #00bfff;
-}
-
-.testimonial-socials {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 15px;
-}
-
-.testimonial-socials a {
-  width: 36px;
-  height: 36px;
-  background: #184f8a;
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-/* Hover colors */
-.testimonial-socials a:hover {
-  background: #000;
-  color: #fff;
-  transform: translateY(-4px);
-}
-
 /*FOOTER STYLE*/
 .modern-footer{
   background:#184f8a;
@@ -1138,3 +748,225 @@ header{
   }
 }
 
+/* CAREERS SECTION */
+.careers-section{
+  padding: 100px 20px;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.careers-container{
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+.careers-header{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.bracket-heading{
+  position: relative;
+  display: inline-block;
+  padding: 14px 40px;
+  font-size: 15px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #222;
+  font-weight: 500;
+}
+
+/* CORNER BRACKETS */
+.bracket-heading::before,
+.bracket-heading::after{
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #222;
+}
+
+/* TOP-LEFT */
+.bracket-heading::before{
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* BOTTOM-RIGHT */
+.bracket-heading::after{
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.careers-header h2{
+  font-size: 36px;
+  margin: 15px 0;
+}
+
+.careers-header span {
+    color: #000;
+}
+
+.careers-header h2{
+  color: #000;
+}
+
+.careers-header p{
+  font-size: 15px;
+  color: #666;
+}
+
+/* CONTENT */
+.careers-content{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+/* JOB GRID */
+.jobs-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.job-card{
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+  border: #0d335c 1px solid;
+}
+
+.job-card:hover{
+  transform: translateY(-8px);
+}
+
+.job-type{
+  font-size: 12px;
+  color: #888;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.job-card h4{
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.job-card p{
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.apply-btn{
+  display: inline-block;
+  padding: 8px 18px;
+  background: #0d335c;
+  color: #fff;
+  font-size: 13px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.apply-btn:hover {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* FORM */
+.career-form{
+  background: #fff;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  border: #0d335c 1px solid;
+}
+
+.career-form h3{
+  margin-bottom: 25px;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+}
+
+.career-form input,
+.career-form textarea{
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.career-form textarea{
+  resize: none;
+  height: 90px;
+}
+
+.career-form button{
+  width: 100%;
+  padding: 12px;
+  background: #0d335c;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.career-form button:hover {
+    background: #000;
+    color: #fff;
+}
+
+.form-group{
+  margin-bottom: 14px;
+}
+
+.form-group input,
+.form-group textarea{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.form-group small{
+  color: #e63946;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+  visibility: hidden;
+}
+
+.form-group.error input,
+.form-group.error textarea{
+  border-color: #e63946;
+}
+
+.form-group.error small{
+  visibility: visible;
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+  .careers-content{
+    grid-template-columns: 1fr;
+  }
+
+  .jobs-grid{
+    grid-template-columns: 1fr;
+  }
+}

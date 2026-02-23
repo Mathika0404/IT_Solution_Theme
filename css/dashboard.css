@@ -10,15 +10,24 @@ body {
   color: #333;
 }
 
+html, body {
+      overflow-x: hidden !important;
+}
+
 /* Layout */
-.dashboard {
+.dashboard{
   display: flex;
+  width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.dashboard > * {
+  min-width: 0;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 260px;
   background: #2f6073;
   color: #fff;
   padding: 25px;
@@ -499,15 +508,138 @@ body.dark .card {
   font-size: 11px;
   color: #777;
 }
-/* Responsive */
-@media (max-width: 900px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
+
+@media (max-width: 360px){
+
+  html, body{
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 
+  .dashboard{
+    flex-direction: column;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .sidebar,
+  .main{
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /* Disable transforms ONLY on mobile */
+  .card,
+  .overview-card,
+  .stat-card,
+  .dashboard-box{
+    transform: none !important;
+  }
+
+   /* STATS GRID → single column */
+  .stats-grid{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Cards full width */
+  .stat-card{
+    width: 100%;
+    padding: 16px;
+  }
+
+  /* Remove tall / wide behavior */
   .tall,
-  .wide {
+  .wide{
     grid-column: span 1;
     grid-row: span 1;
+  }
+
+  /* USERS CARD */
+  .users-content h2{
+    font-size: 22px;
+  }
+
+  /* INVENTORY */
+  .inventory-content{
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* STORE ROW TEXT */
+  .store-row span{
+    font-size: 12px;
+  }
+
+  /* SALES CHART STACK */
+  .sales-chart{
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  /* Y AXIS INLINE */
+  .y-axis{
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  /* SVG SAFE SIZE */
+  .sales-chart svg{
+    width: 100%;
+    height: auto;
+  }
+
+  /* X AXIS */
+  .x-axis{
+    grid-column: 1;
+    font-size: 10px;
+  }
+}
+svg {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: block;
+}
+
+/* 📱 PHONE LANDSCAPE + PORTRAIT FIX */
+@media (max-width: 768px){
+
+  html, body{
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .dashboard{
+    flex-direction: column; /* 🔑 critical */
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .sidebar,
+  .main{
+    width: 100% !important;
+    max-width: 100vw;
+  }
+
+  /* Force single column layouts */
+  .stats-grid,
+  .overview-cards,
+  .cards,
+  .content-grid{
+    grid-template-columns: 1fr !important;
+  }
+
+  /* SVG safety */
+  svg{
+    max-width: 100%;
+    overflow: hidden;
   }
 }

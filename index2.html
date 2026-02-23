@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Solution Website</title>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/style2.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="icon" href="./images/image.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+</head>
+<body>
+  <!-- LOGIN MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- TITLE -->
+    <h2 id="formTitle">Client Login</h2>
+    <p id="formSubtitle">Access your IT services dashboard</p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="text" id="companyName" placeholder="Company Name" style="display:none;">
+
+      <!-- COMMON FIELDS -->
+      <input type="email" placeholder="Company Email" required>
+      <input type="text" placeholder="Client ID / Project Code" required>
+
+      <!-- PASSWORD -->
+<div class="password-field">
+  <input type="password" id="loginPassword" placeholder="Password" required>
+  <i class="fa-solid fa-eye-slash toggle-eye"
+     id="eyeIcon"
+     onclick="togglePassword()"></i>
+</div>
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="password" id="confirmPassword"
+             placeholder="Confirm Password" style="display:none;">
+
+      <button type="submit" class="login-submit" id="submitBtn">Login</button>
+
+    </form>
+
+    <!-- SWITCH LINK -->
+    <p class="switch-text">
+      <span id="switchText">Don’t have an account?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Sign up</a>
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- NAVBAR START -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <!-- LOGO -->
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./images/stackly_logo.webp" alt="logo" class="logo-img">
+        </a>
+      </div>
+
+      <!-- BURGER MENU -->
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <!-- NAV LINKS -->
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index2.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="index.html">Home Page 1</a></li>
+        </ul>
+      </li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="career.html">Career</a></li>
+      <li><a href="contact2.html">contact</a></li>
+    </ul>
+
+  </nav>
+</header>
+<!-- NAVBAR END -->
+
+  <section id="home" class="home">
+      <h2>Transform Your Business Online</h2>
+      <h3>with our Professional IT Services</h3>
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+  </section>
+
+ <section class="about-section">
+  <div class="about-container">
+
+ <!-- LEFT : IMAGE + WAVE IMAGE -->
+<div class="about-left">
+
+  <!-- WAVE IMAGE -->
+  <img src="./images/about4.webp" alt="Wave Design" class="wave-img">
+
+  <div class="image-collage">
+    <img src="./images/about1.webp" class="img-main" alt="Team Working">
+    <img src="./images/about2.webp" class="img-small top" alt="Office">
+    <img src="./images/about3.webp" class="img-small bottom" alt="Discussion">
+
+        <div class="experience-box">
+          <h3>20</h3>
+          <p>Years Of<br>Experience</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT : CONTENT -->
+<div class="about-right">
+  <span class="section-tag">OUR BEST</span>
+
+  <h2>We Help IT Companies Scale Engineering Capacity</h2>
+
+  <p class="about-desc">
+    Provide scalable IT solutions with proven expertise. We help companies
+    grow faster with reliable technology and expert teams.
+  </p>
+
+      <div class="about-feature">
+        <i class="fa-solid fa-certificate"></i>
+        <div>
+          <h4>Certified Company</h4>
+          <p>Trusted and certified IT service provider delivering quality solutions.</p>
+        </div>
+      </div>
+
+      <div class="about-feature">
+        <i class="fa-solid fa-award"></i>
+        <div>
+          <h4>Award Ceremony</h4>
+          <p>Recognized for excellence and innovation in IT services.</p>
+        </div>
+      </div>
+
+<div class="about-feature">
+  <i class="fa-solid fa-globe"></i>
+  <div>
+    <h4>Global Presence</h4>
+    <p>Serving clients worldwide with reliable and secure technology services.</p>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <section class="counters">
+    <div class="container">
+        <div>
+            <i class="far fa-clock fa-4x"></i>
+            <div class="counter" data-target="13500">0</div>
+            <h3>Working Hours</h3>
+        </div>
+        <div>
+            <i class="fas fa-gift fa-4x"></i>
+            <div class="counter" data-target="720">0</div>
+            <h3>Completed Projects</h3>
+        </div>
+        <div>
+            <i class="fas fa-users fa-4x"></i>
+            <div class="counter" data-target="480">0</div>
+            <h3>Happy Clients</h3>
+        </div>
+        <div>
+            <i class="fas fa-award fa-4x"></i>
+            <div class="counter" data-target="120">0</div>
+            <h3>Awards Received</h3>
+        </div>
+    </div>
+</section>
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery/jquery-migrate.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+
+
+<section class="solutions-section">
+  <div class="solutions-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="solutions-left">
+      <span class="section-tag">WHY CHOOSE US</span>
+
+      <h2>Smart Technology Solutions<br>That Power Digital Growth</h2>
+
+      <p class="solutions-desc">
+        We design and deliver future-ready IT solutions that help organizations
+        streamline operations, enhance security, and accelerate innovation.
+      </p>
+
+      <!-- VIDEO BUTTON -->
+      <div class="video-showcase">
+        <a href="404.html" class="video-btn">
+          <i class="fa-solid fa-play"></i>
+        </a>
+        <span>VIDEO SHOWCASE</span>
+      </div>
+    </div>
+
+    <!-- RIGHT CARDS -->
+    <div class="solutions-right">
+
+      <div class="solution-card active">
+        <i class="fa-solid fa-diagram-project"></i>
+        <h4>IT Strategy & Planning</h4>
+        <p>Technology roadmaps aligned with long-term business objectives.</p>
+      </div>
+
+      <div class="solution-card">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+        <h4>Cloud Transformation</h4>
+        <p>Modernize infrastructure with secure and scalable cloud platforms.</p>
+      </div>
+
+      <div class="solution-card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h4>Threat Protection</h4>
+        <p>Advanced security frameworks to protect critical digital assets.</p>
+      </div>
+
+      <div class="solution-card active">
+        <i class="fa-solid fa-database"></i>
+        <h4>Data Management</h4>
+        <p>Reliable data systems designed for performance and resilience.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="process-section">
+  <div class="container">
+
+    <!-- SECTION HEADER -->
+<section class="process-section">
+  <span class="bracket-heading">PROCESS</span>
+  <h2>How We Work</h2>
+      <p>
+        Our structured approach ensures reliable, scalable, and secure IT
+        solutions tailored to your business needs.
+      </p>
+    </div>
+
+    <!-- PROCESS STEPS -->
+    <div class="process-steps">
+
+      <div class="process-step">
+        <div class="step-icon">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+        </div>
+        <h4>Requirement Analysis</h4>
+        <p>
+          We analyze your business goals, challenges, and technical needs to
+          design the right IT strategy.
+        </p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-icon">
+          <i class="fa-solid fa-diagram-project"></i>
+        </div>
+        <h4>Solution Planning</h4>
+        <p>
+          Our experts create a scalable architecture and roadmap aligned with
+          performance and security standards.
+        </p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h4>Development & Integration</h4>
+        <p>
+          We build, integrate, and configure systems using modern technologies
+          and best practices.
+        </p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h4>Testing & Security</h4>
+        <p>
+          Rigorous testing and security validation ensure reliability,
+          compliance, and data protection.
+        </p>
+      </div>
+
+      <div class="process-step">
+        <div class="step-icon">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
+        <h4>Deployment & Support</h4>
+        <p>
+          We deploy the solution seamlessly and provide continuous monitoring,
+          optimization, and support.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="modern-footer">
+
+  <div class="footer-content">
+
+    <!-- Brand -->
+    <div class="footer-col brand">
+      <h2>STACKLY</h2>
+      <p>
+        We deliver modern IT solutions that help businesses grow online.
+        Our services include web development, cloud solutions, and digital innovation.
+      </p>
+    </div>
+
+    <!-- Company -->
+    <div class="footer-col">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="index2.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="contact2.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Design -->
+    <div class="footer-col">
+      <h4>Design</h4>
+      <ul>
+        <li><a href="404.html">Design Process</a></li>
+        <li><a href="404.html">Find a Designer</a></li>
+        <li><a href="404.html">Discover Inspiration</a></li>
+        <li><a href="404.html">Pricing</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="404.html">Blog</a></li>
+        <li><a href="404.html">Support</a></li>
+        <li><a href="404.html">Design & Branding</a></li>
+        <li><a href="404.html">FAQs</a></li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h4>Social Media</h4>
+      <div class="social-icons">
+        <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Curved Bottom -->
+  <div class="footer-bottom">
+    <p>© All rights reserved 2025</p>
+  </div>
+<a href="index2.html" class="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</a>
+</footer>
+<script>
+/* ================= DOM READY ================= */
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ================= MOBILE MENU ================= */
+  const menuBtn = document.getElementById("menu-btn");
+  const navLinks = document.getElementById("nav-links");
+
+  if (menuBtn && navLinks) {
+
+    const icon = menuBtn.querySelector("i");
+
+    menuBtn.addEventListener("click", () => {
+
+      const isOpen = navLinks.classList.toggle("open");
+
+      if (icon) {
+        icon.classList.toggle("ri-menu-line", !isOpen);
+        icon.classList.toggle("ri-close-line", isOpen);
+      }
+    });
+}
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+
+  counters.forEach(counter => {
+    counter.innerText = "0";
+
+    const updateCounter = () => {
+      const target = Number(counter.dataset.target);
+      const current = Number(counter.innerText);
+      const increment = Math.max(target / 200, 1);
+
+      if (current < target) {
+        counter.innerText = Math.ceil(current + increment);
+        setTimeout(updateCounter, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCounter();
+  });
+});
+</script>
+<script src="./js/script.js"></script>
+</body>
+</html>

@@ -23,7 +23,8 @@
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="./css/service.css">
+<link rel="stylesheet" href="./css/contact2.css">
+
 
 </head>
 <body>
@@ -94,17 +95,15 @@
     <!-- NAV LINKS -->
     <ul class="nav__links" id="nav-links">
       <li class="dropdown">
-        <a href="index.html">Home</a>
+        <a href="index2.html">Home</a>
         <i class="ri-arrow-down-s-line arrow"></i>
         <ul class="dropdown-menu">
-          <li><a href="index2.html">Home Page 2</a></li>
+          <li><a href="index.html">Home Page 1</a></li>
         </ul>
       </li>
-      <li><a href="about.html">about</a></li>
-      <li><a href="service.html">services</a></li>
-      <li><a href="contact.html">contact</a></li>
-      <li><a href="javascript:void(0)" onclick="openLogin()">Login</a></li>
-      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="career.html">Career</a></li>
+      <li><a href="contact2.html">contact</a></li>
     </ul>
 
   </nav>
@@ -112,209 +111,141 @@
 <!-- NAVBAR END -->
 
   <section id="home" class="home">
-      <h2>Home / Service</h2>
-      <h3>Your success is our service commitment!</h3>
+      <h2>Home / Contact</h2>
+      <h3>Get in touch!</h3>
     <div class="wave wave1"></div>
     <div class="wave wave2"></div>
     <div class="wave wave3"></div>
   </section>
 
-  <!--SERVICE SECTION-->
-  <section class="it-service-cards">
 
-<div class="section-header">
-  <span class="section-tag">OUR SERVICES</span>
-  <h2>Smart IT Services That Power Your Business</h2>
-</div>
-  <div class="cards-grid">
+  <!-- CONTACT SECTION -->
+<section class="contact-section">
+  <div class="contact-container">
 
-    <!-- Card 1 -->
-    <div class="service-card">
-      <div class="icon-circle">
-        <!-- Code Icon -->
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M8 9L4 12L8 15M16 9L20 12L16 15" />
-          <path d="M14 4L10 20" />
-        </svg>
-      </div>
-      <h4>Software Development</h4>
-      <p>Custom applications built with scalable and secure technologies.</p>
-      <a href="404.html" class="btn-read">Read More</a>
+    <!-- Header -->
+    <div class="contact-header">
+      <h2>Contact Us</h2>
+      <p>
+        Reach out to us for IT solutions, support, or business inquiries.
+        Our team is always ready to help you.
+      </p>
     </div>
 
-    <!-- Card 2 (Featured) -->
-    <div class="service-card featured">
-      <div class="icon-circle">
-        <!-- Cloud Icon -->
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M7 18H18A4 4 0 0 0 18 10A5 5 0 0 0 8 9A3 3 0 0 0 7 18Z"/>
-        </svg>
-      </div>
-      <h4>Cloud Solutions</h4>
-      <p>Reliable cloud infrastructure, migration, and management services.</p>
-      <a href="404.html" class="btn-read">Read More</a>
-    </div>
+    <!-- Contact Info -->
+    <div class="contact-info-grid">
 
-    <!-- Card 3 -->
-    <div class="service-card">
-      <div class="icon-circle">
-        <!-- Shield Icon -->
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M12 3L19 6V11C19 16 15 20 12 21C9 20 5 16 5 11V6L12 3Z"/>
-        </svg>
+      <!-- Email -->
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <h4>Email Address</h4>
+        <p>hello@yourcompany.com</p>
+        <p>support@yourcompany.com</p>
       </div>
-      <h4>Cybersecurity</h4>
-      <p>Protect systems and data with advanced security solutions.</p>
-      <a href="404.html" class="btn-read">Read More</a>
-    </div>
 
-    <!-- Card 4 -->
-    <div class="service-card">
-      <div class="icon-circle">
-        <!-- Chart Icon -->
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M4 20V10M10 20V4M16 20V14M22 20H2"/>
-        </svg>
+      <!-- Phone -->
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <h4>Phone Number</h4>
+        <p>+91 98765 43210</p>
+        <p>+91 91234 56789</p>
       </div>
-      <h4>IT Consulting</h4>
-      <p>Expert guidance to align technology with business strategy.</p>
-      <a href="404.html" class="btn-read">Read More</a>
-    </div>
 
-    <!-- Card 5 -->
-    <div class="service-card">
-      <div class="icon-circle">
-        <!-- Gear Icon -->
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M12 8A4 4 0 1 0 12 16A4 4 0 1 0 12 8Z"/>
-          <path d="M2 12H6M18 12H22M12 2V6M12 18V22"/>
-        </svg>
+      <!-- Location -->
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <h4>Office Location</h4>
+        <p>Vellore, Tamil Nadu</p>
+        <p>India</p>
       </div>
-      <h4>System Integration</h4>
-      <p>Seamless integration of platforms and enterprise tools.</p>
-      <a href="404.html" class="btn-read">Read More</a>
-    </div>
 
-    <!-- Card 6 -->
-    <div class="service-card">
-      <div class="icon-circle">
-        <!-- Headset Icon -->
-        <svg viewBox="0 0 24 24" fill="none">
-          <path d="M4 12A8 8 0 0 1 20 12"/>
-          <path d="M4 12V16H8V12M20 12V16H16V12"/>
-        </svg>
+      <!-- Work Time -->
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fa-regular fa-clock"></i>
+        </div>
+        <h4>Working Hours</h4>
+        <p>Mon – Fri: 9:00 AM – 6:00 PM</p>
+        <p>Sat: 9:00 AM – 1:00 PM</p>
       </div>
-      <h4>IT Support</h4>
-      <p>24/7 monitoring, maintenance, and technical support.</p>
-      <a href="404.html" class="btn-read">Read More</a>
-    </div>
 
+    </div>
   </div>
 </section>
 
-<!-- COMMUNICATE / CTA SECTION -->
-<section class="communicate">
-  <div class="communicate-content">
-    <h3>Let’s Build Smart IT Solutions Together</h3>
-    <p>Have an idea or project in mind? Our team is ready to help.</p>
-    <a href="contact.html" class="btn">Contact Now</a>
-  </div>
-</section>
+<!-- CONTACT FORM SECTION -->
+<section class="contact-form-section">
+  <div class="contact-wrapper">
 
+    <!-- LEFT CONTENT -->
+    <div class="contact-left">
+      <span class="contact-tag">CONTACT</span>
+      <h2>Get In Touch With Us</h2>
+      <p>
+        Reach out to our IT experts for solutions, support, or project discussions.
+        We’re here to help you grow with technology.
+      </p>
 
-<!-- TESTIMONIALS SECTION -->
-<section class="testimonials">
-  <div class="container">
+<form class="contact-form" id="contactForm" novalidate>
 
-    <!-- SECTION HEADER -->
-    <div class="section-header center">
-      <span class="section-tag">TESTIMONIALS</span>
-      <h2>What Our Clients Say About Us</h2>
-      <p>Trusted by businesses for delivering reliable IT solutions</p>
+  <div class="form-row">
+    <div class="field">
+      <input type="text" id="name" placeholder="Name">
+      <small class="error"></small>
     </div>
 
-    <!-- CAROUSEL -->
-    <div class="owl-carousel testimonials-carousel">
+    <div class="field">
+      <input type="email" id="email" placeholder="Email">
+      <small class="error"></small>
+    </div>
+  </div>
 
-      <!-- ITEM -->
-      <div class="testimonial-card">
-        <div class="testimonial-img">
-          <img src="./images/testimonal1.webp" alt="Client">
-        </div>
-        <p class="testimonial-text">
-          The IT solutions provided were reliable, scalable, and perfectly aligned
-          with our business needs.
-        </p>
-<div class="testimonial-socials">
-  <a href="404.html" class="fab fa-facebook-f"></a>
-  <a href="404.html" class="fab fa-twitter"></a>
-  <a href="404.html" class="fab fa-instagram"></a>
-  <a href="404.html" class="fab fa-linkedin-in"></a>
-</div>
+  <div class="form-row">
+    <div class="field">
+      <input type="text" id="phone" placeholder="Phone Number">
+      <small class="error"></small>
+    </div>
+
+    <div class="field">
+      <input type="text" id="subject" placeholder="Subject">
+      <small class="error"></small>
+    </div>
+  </div>
+
+  <div class="field">
+    <textarea id="message" placeholder="Message"></textarea>
+    <small class="error"></small>
+  </div>
+
+  <button type="submit">Send Message</button>
+</form>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="contact-right">
+      <div class="image-box">
+        <img src="./images/contact_image.webp" alt="Contact Team">
       </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-img">
-          <img src="./images/testimonal2.webp" alt="Client">
-        </div>
-        <p class="testimonial-text">
-          Professional team with excellent technical expertise and outstanding
-          support throughout the project.
-        </p>
-<div class="testimonial-socials">
-  <a href="404.html" class="fab fa-facebook-f"></a>
-  <a href="404.html" class="fab fa-twitter"></a>
-  <a href="404.html" class="fab fa-instagram"></a>
-  <a href="404.html" class="fab fa-linkedin-in"></a>
-</div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-img">
-          <img src="./images/testimonal3.webp" alt="Client">
-        </div>
-        <p class="testimonial-text">
-          They transformed our ideas into a powerful digital solution that helped
-          us scale faster.
-        </p>
-<div class="testimonial-socials">
-  <a href="404.html" class="fab fa-facebook-f"></a>
-  <a href="404.html" class="fab fa-twitter"></a>
-  <a href="404.html" class="fab fa-instagram"></a>
-  <a href="404.html" class="fab fa-linkedin-in"></a>
-</div>
-      </div>
-
-            <div class="testimonial-card">
-        <div class="testimonial-img">
-          <img src="./images/client3.webp" alt="Client">
-        </div>
-        <p class="testimonial-text">
-          Professional team with excellent technical expertise and outstanding
-          support throughout the project.
-        </p>
-<div class="testimonial-socials">
-  <a href="404.html" class="fab fa-facebook-f"></a>
-  <a href="404.html" class="fab fa-twitter"></a>
-  <a href="404.html" class="fab fa-instagram"></a>
-  <a href="404.html" class="fab fa-linkedin-in"></a>
-</div>
-      </div>
-
     </div>
 
   </div>
+
+  <div class="map-box">
+  <iframe
+    src="https://www.google.com/maps?q=Vellore,Tamil Nadu,India&output=embed"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
 </section>
 
-<script src="lib/jquery/jquery.min.js"></script>
-<script src="lib/jquery/jquery-migrate.min.js"></script>
-<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/lightbox/js/lightbox.min.js"></script>
-<!--FOOTER SECTION-->
+ <!--FOOTER SECTION-->
 <footer class="modern-footer">
 
   <div class="footer-content">
@@ -332,10 +263,10 @@
     <div class="footer-col">
       <h4>Links</h4>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li><a href="404.html">Contact</a></li>
+        <li><a href="index2.html">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="contact2.html">Contact</a></li>
       </ul>
     </div>
 
@@ -402,6 +333,50 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 }
+});
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let isValid = true;
+
+  // Get fields
+  const fields = [
+    { id: "name", message: "Name is required" },
+    { id: "email", message: "Valid email is required", email: true },
+    { id: "phone", message: "Phone number is required" },
+    { id: "subject", message: "Subject is required" },
+    { id: "message", message: "Message is required" }
+  ];
+
+  fields.forEach(field => {
+    const input = document.getElementById(field.id);
+    const error = input.nextElementSibling;
+
+    input.classList.remove("error-border");
+    error.textContent = "";
+
+    if (!input.value.trim()) {
+      error.textContent = field.message;
+      input.classList.add("error-border");
+      isValid = false;
+    }
+
+    // Email validation
+    if (field.email && input.value.trim()) {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(input.value)) {
+        error.textContent = "Enter a valid email address";
+        input.classList.add("error-border");
+        isValid = false;
+      }
+    }
+  });
+
+  // If all valid → redirect to 404 page
+  if (isValid) {
+    window.location.href = "404.html";
+  }
 });
 
 /* OPEN LOGIN MODAL */
@@ -477,7 +452,6 @@ window.addEventListener("click", function(e){
     modal.style.display = "none";
   }
 });
-
 </script>
 
 <script src="./js/script.js"></script>

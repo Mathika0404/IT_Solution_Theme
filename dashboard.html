@@ -21,7 +21,7 @@
   <aside class="sidebar">
     <div class="profile">
       <div class="profile-img">
-        <img src="./images/team1.jpg" alt="User">
+        <img src="./images/team1.webp" alt="User">
       </div>
       <h4>Nirmal Kumar P</h4>
       <p>Admin</p>
@@ -154,8 +154,17 @@
         <line x1="0" y1="190" x2="600" y2="190"/>
       </g>
 
-      <path d="M0,150 C80,140 160,130 240,120 320,110 400,100 480,95 600,85" class="line target"/>
-      <path d="M0,160 C80,120 160,150 240,80 320,140 400,60 480,120 600,80" class="line sales"/>
+<path
+  d="M0 150
+     C 80 140, 160 130, 240 120
+     S 400 100, 600 85"
+  class="line target" />
+
+<path
+  d="M0 160
+     C 80 120, 160 150, 240 80
+     S 400 60, 600 80"
+  class="line sales" />
     </svg>
 
     <div class="x-axis"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div>
@@ -168,17 +177,12 @@
 </div>
 
 <script>
-    // Dark mode toggle
-const toggle = document.getElementById("modeToggle");
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  document.body.classList.toggle("light");
-});
-
 // Logout redirect
 function logout() {
   window.location.href = "404.html";
 }
+
+
 </script>
 </body>
 </html>

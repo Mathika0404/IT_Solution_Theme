@@ -393,6 +393,7 @@ header{
   color: #fff;
   text-decoration: none;
 }
+
 }
 
 
@@ -576,7 +577,7 @@ header{
 .home{
     min-height: 100vh;
     width: 100vw;
-    background-image: url(../images/img1.jpeg);
+    background-image: url(../images/img1.webp);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -934,7 +935,7 @@ header{
 }
 
 .counters {
-	background-image: url(./images/img2.jpg);
+	background-image: url(../images/img1.webp);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -978,34 +979,53 @@ header{
 
 .section-header{
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 
 .clients {
-  margin-top: -300px;
+  padding: 100px 0; 
+  background: #f6f7fb;
 }
 
 /* Clients container */
 .clients-carousel{
   display: grid;
-  grid-template-columns: repeat(5, minmax(220px, 1fr));
-  gap: 40px;
-  justify-content: center;   
-  justify-items: center;     
-  align-items: center; 
+
+  grid-template-columns: repeat(5, 320px); /* ⬅ larger cards */
+  gap: 50px;
+
+  max-width: calc(5 * 320px + 4 * 50px);
+  margin-inline: auto;
+
+  padding-inline: 60px;
+  padding-block: 30px;
+
+  justify-content: center;
+  align-items: center;
 }
 
 .clients-carousel img{
   width: 100%;
-  max-width: 360px;
-  background: #fff;
-  padding: 15px;
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
+  max-width: 320px;
 
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-  transition: transform 0.4s ease;
+  background: #fff;
+  padding: 22px;
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.22),
+    0 8px 16px rgba(0,0,0,0.16);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.clients-carousel img:hover{
+  transform: translateY(-10px) scale(1.03);
+  box-shadow:
+    0 25px 45px rgba(0,0,0,0.25),
+    0 10px 20px rgba(0,0,0,0.18);
 }
 
 .clients-carousel img::before{
