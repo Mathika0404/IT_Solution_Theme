@@ -312,27 +312,46 @@
 </footer>
 
 <script>
-/* ================= DOM READY ================= */
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
 
-  /* ================= MOBILE MENU ================= */
+  /* ===== MOBILE MENU ===== */
   const menuBtn = document.getElementById("menu-btn");
   const navLinks = document.getElementById("nav-links");
 
   if (menuBtn && navLinks) {
-
     const icon = menuBtn.querySelector("i");
 
     menuBtn.addEventListener("click", () => {
-
       const isOpen = navLinks.classList.toggle("open");
-
-      if (icon) {
-        icon.classList.toggle("ri-menu-line", !isOpen);
-        icon.classList.toggle("ri-close-line", isOpen);
-      }
+      icon.classList.toggle("ri-menu-line", !isOpen);
+      icon.classList.toggle("ri-close-line", isOpen);
     });
-}
+  }
+
+  /* ===== DROPDOWN ===== */
+  const dropdown = document.querySelector(".dropdown");
+
+  if (dropdown) {
+    const arrow = dropdown.querySelector(".arrow");
+    const dropdownMenu = dropdown.querySelector(".dropdown-menu");
+
+    arrow.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropdownMenu.classList.toggle("show");
+      arrow.classList.toggle("rotate");
+    });
+
+    document.addEventListener("click", () => {
+      dropdownMenu.classList.remove("show");
+      arrow.classList.remove("rotate");
+    });
+
+    dropdownMenu.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  }
+
 });
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
