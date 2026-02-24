@@ -417,6 +417,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const teamSection = document.querySelector(".team");
+
+  if (!teamSection) return;
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          teamSection.classList.add("animate-team");
+          observer.unobserve(teamSection); // animate once
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+
+  observer.observe(teamSection);
+
+});
 </script>
 
 <script src="./js/script.js"></script>

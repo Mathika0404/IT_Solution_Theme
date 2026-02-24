@@ -473,6 +473,26 @@ window.addEventListener("click", function(e){
     modal.style.display = "none";
   }
 });
+
+  const contactSection = document.querySelector(".contact-section");
+  const contactFormSection = document.querySelector(".contact-form-section");
+  const mapBox = document.querySelector(".map-box");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(
+          entry.target === contactSection ? "contact-active" :
+          entry.target === contactFormSection ? "form-active" :
+          "map-active"
+        );
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(contactSection);
+  observer.observe(contactFormSection);
+  observer.observe(mapBox);
 </script>
 
 <script src="./js/script.js"></script>

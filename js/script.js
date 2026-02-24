@@ -263,3 +263,48 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCounter();
   });
 });
+
+  const aboutSection = document.querySelector(".about");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          aboutSection.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  observer.observe(aboutSection);
+
+    const servicesSection = document.querySelector(".pt-5.pb-5");
+
+  const serviceObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          servicesSection.classList.add("services-active");
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  serviceObserver.observe(servicesSection);
+
+    const clientSection = document.querySelector(".clients");
+
+  const clientObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          clientSection.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  clientObserver.observe(clientSection);

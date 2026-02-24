@@ -240,9 +240,9 @@
       <h4>Links</h4>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="404.html">About</a></li>
-        <li><a href="404.html">Services</a></li>
-        <li><a href="404.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
@@ -406,6 +406,36 @@ window.addEventListener("click", function(e){
     modal.style.display = "none";
   }
 });
+
+  const itAbout = document.querySelector(".it-about-style");
+
+  const itObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          itAbout.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.35 }
+  );
+
+  itObserver.observe(itAbout);
+
+    const workflow = document.querySelector(".it-workflow");
+
+  const workflowObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          workflow.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.35 }
+  );
+
+  workflowObserver.observe(workflow);
 </script>
 
 <script src="./js/script.js"></script>

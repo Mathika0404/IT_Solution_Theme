@@ -421,11 +421,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.getElementById("nav-links");
 
   if (menuBtn && navLinks) {
-
     const icon = menuBtn.querySelector("i");
 
     menuBtn.addEventListener("click", () => {
-
       const isOpen = navLinks.classList.toggle("open");
 
       if (icon) {
@@ -433,30 +431,57 @@ document.addEventListener("DOMContentLoaded", () => {
         icon.classList.toggle("ri-close-line", isOpen);
       }
     });
-}
-});
+  }
 
-document.addEventListener("DOMContentLoaded", () => {
+  /* ================= COUNTER ANIMATION ================= */
   const counters = document.querySelectorAll(".counter");
 
-  counters.forEach(counter => {
-    counter.innerText = "0";
+  if (counters.length > 0) {
+    counters.forEach(counter => {
+      counter.innerText = "0";
 
-    const updateCounter = () => {
-      const target = Number(counter.dataset.target);
-      const current = Number(counter.innerText);
-      const increment = Math.max(target / 200, 1);
+      const updateCounter = () => {
+        const target = Number(counter.dataset.target);
+        const current = Number(counter.innerText);
+        const increment = Math.max(target / 200, 1);
 
-      if (current < target) {
-        counter.innerText = Math.ceil(current + increment);
-        setTimeout(updateCounter, 20);
-      } else {
-        counter.innerText = target;
+        if (current < target) {
+          counter.innerText = Math.ceil(current + increment);
+          setTimeout(updateCounter, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCounter();
+    });
+  }
+
+  /* ================= SECTION ANIMATIONS ================= */
+  const sections = [
+    { el: ".about-section", cls: "animate-about" },
+    { el: ".counters", cls: "animate-counters" },
+    { el: ".solutions-section", cls: "animate-solutions" },
+    { el: ".process-section", cls: "animate-process" }
+  ];
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const match = sections.find(s => entry.target.matches(s.el));
+        if (match) {
+          entry.target.classList.add(match.cls);
+          observer.unobserve(entry.target); // run animation once
+        }
       }
-    };
+    });
+  }, { threshold: 0.35 });
 
-    updateCounter();
+  sections.forEach(s => {
+    const sectionEl = document.querySelector(s.el);
+    if (sectionEl) observer.observe(sectionEl);
   });
+
 });
 </script>
 <script src="./js/script.js"></script>

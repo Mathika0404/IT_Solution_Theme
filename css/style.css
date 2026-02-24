@@ -766,6 +766,146 @@ header{
   }
 }
 
+/* ===============================
+   ABOUT SECTION ANIMATIONS
+================================*/
+
+/* Initial hidden state */
+.about .heading,
+.about .sub-heading,
+.about-images,
+.about .content,
+.experience-badge {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* When active */
+.about.active .heading {
+  animation: fadeDown 0.8s ease forwards;
+}
+
+.about.active .sub-heading {
+  animation: fadeDown 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.about.active .about-images {
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.about.active .content {
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* ------------------------------
+   IMAGE ANIMATIONS
+--------------------------------*/
+
+/* Top image float */
+.about.active .img-top {
+  animation: imageFloat 6s ease-in-out infinite,
+             imageIn 1s ease forwards;
+}
+
+/* Bottom image slide + deh */
+.about.active .img-bottom {
+  animation: imageSlide 1.2s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* ------------------------------
+   EXPERIENCE BADGE
+--------------------------------*/
+.about.active .experience-badge {
+  animation: badgePop 0.9s cubic-bezier(.68,-0.55,.27,1.55) forwards,
+             badgePulse 2.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* ------------------------------
+   KEYFRAMES
+--------------------------------*/
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes imageFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes imageSlide {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes badgePop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes badgePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
 
 .sub-heading{
   text-align: center;
@@ -884,6 +1024,88 @@ header{
 .item:hover h6,
 .item:hover p{
   color:#fff;
+}
+
+/* ==============================
+   SERVICES SECTION ANIMATIONS
+================================*/
+
+/* Initial hidden state */
+#service h1,
+#service h2,
+.item {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+}
+
+/* Section heading animation */
+.services-active #service h1 {
+  animation: serviceTitle 0.8s ease forwards;
+}
+
+.services-active #service h2 {
+  animation: serviceTitle 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Cards animation */
+.services-active .item {
+  animation: serviceCard 0.8s ease forwards;
+}
+
+/* Stagger effect */
+.services-active .col-lg-4:nth-child(1) .item { animation-delay: 0.3s; }
+.services-active .col-lg-4:nth-child(2) .item { animation-delay: 0.5s; }
+.services-active .col-lg-4:nth-child(3) .item { animation-delay: 0.7s; }
+
+/* Icon animation */
+.services-active .item .icon {
+  animation: iconPop 1s ease forwards;
+}
+
+/* Hover icon micro interaction */
+.item:hover .icon i {
+  transform: rotate(12deg) scale(1.15);
+}
+
+/* ==============================
+   KEYFRAMES
+================================*/
+
+@keyframes serviceTitle {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes serviceCard {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes iconPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-20deg);
+  }
+  60% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
 }
 
 @media (max-width: 360px){
@@ -1050,6 +1272,109 @@ header{
 .clients-carousel img:hover{
     transform: scale(0.95) translateY(-6px);
   box-shadow: 0 25px 35px -12px rgba(0,0,0,0.45);
+}
+
+/* ===============================
+   CLIENTS SECTION ANIMATIONS
+================================*/
+
+/* Initial hidden state */
+.clients h2,
+.clients p,
+.clients-carousel img {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+}
+
+/* Active state */
+.clients.active h2 {
+  animation: clientTitle 0.8s ease forwards;
+}
+
+.clients.active p {
+  animation: clientTitle 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.clients.active .clients-carousel img {
+  animation: clientLogoIn 0.9s ease forwards;
+}
+
+/* Stagger effect */
+.clients.active .clients-carousel img:nth-child(1){ animation-delay: 0.3s; }
+.clients.active .clients-carousel img:nth-child(2){ animation-delay: 0.45s; }
+.clients.active .clients-carousel img:nth-child(3){ animation-delay: 0.6s; }
+.clients.active .clients-carousel img:nth-child(4){ animation-delay: 0.75s; }
+.clients.active .clients-carousel img:nth-child(5){ animation-delay: 0.9s; }
+
+/* Floating animation */
+.clients.active .clients-carousel img {
+  animation:
+    clientLogoIn 0.9s ease forwards,
+    clientFloat 6s ease-in-out infinite;
+}
+
+/* Shine sweep effect */
+.clients-carousel img {
+  position: relative;
+  overflow: hidden;
+}
+
+.clients-carousel img::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:60%;
+  height:100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+  animation: shineMove 4.5s ease-in-out infinite;
+}
+
+/* ===============================
+   KEYFRAMES
+================================*/
+
+@keyframes clientTitle {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes clientLogoIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes clientFloat {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shineMove {
+  0% { left: -120%; }
+  60% { left: 120%; }
+  100% { left: 120%; }
 }
 
 @media (max-width: 1200px){

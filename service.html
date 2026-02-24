@@ -275,7 +275,7 @@
         </div>
         <p class="testimonial-text">
           They transformed our ideas into a powerful digital solution that helped
-          us scale faster.
+          us scale faster. Thank you so much.
         </p>
 <div class="testimonial-socials">
   <a href="404.html" class="fab fa-facebook-f"></a>
@@ -335,7 +335,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="service.html">Services</a></li>
-        <li><a href="404.html">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
@@ -497,6 +497,32 @@ window.addEventListener("click", function(e){
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+
+  const sections = [
+    { el: ".it-service-cards", cls: "animate-services" },
+    { el: ".communicate", cls: "animate-communicate" },
+    { el: ".testimonials", cls: "animate-testimonials" }
+  ];
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const match = sections.find(s => entry.target.matches(s.el));
+        if (match) {
+          entry.target.classList.add(match.cls);
+          observer.unobserve(entry.target); // animate once
+        }
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(s => {
+    const el = document.querySelector(s.el);
+    if (el) observer.observe(el);
+  });
+
+});
 </script>
 
 <script src="./js/script.js"></script>

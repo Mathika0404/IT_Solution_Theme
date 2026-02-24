@@ -713,3 +713,158 @@ box-shadow:
     grid-template-columns: 1fr;
   }
 }
+
+/* ================================
+   GLOBAL ANIMATION INITIAL STATE
+================================ */
+.about-section *,
+.counters *,
+.solutions-section *,
+.process-section * {
+  opacity: 0;
+}
+
+/* ---------- ABOUT SECTION ---------- */
+.wave-img { transform: translateX(-80px); }
+
+.img-main { transform: scale(0.85); }
+.img-small.top { transform: translate(-40px, -40px); }
+.img-small.bottom { transform: translate(40px, 40px); }
+
+.experience-box { transform: scale(0); }
+
+.about-right h2 { transform: translateX(60px); }
+.about-desc { transform: translateY(30px); }
+.about-feature { transform: translateY(30px); }
+
+/* ---------- COUNTERS ---------- */
+.counters .container > div {
+  transform: translateY(40px);
+}
+
+.counters i { transform: scale(0); }
+
+/* ---------- SOLUTIONS ---------- */
+.solutions-left { transform: translateX(-80px); }
+.video-btn { transform: scale(0); }
+
+.solution-card { transform: translateY(40px); }
+
+/* ---------- PROCESS ---------- */
+.bracket-heading { transform: scaleX(0); transform-origin: left; }
+
+.process-step {
+  transform: rotateX(20deg) translateY(60px);
+}
+
+/* ================================
+   ACTIVE STATES
+================================ */
+.animate-about *,
+.animate-counters *,
+.animate-solutions *,
+.animate-process * {
+  opacity: 1;
+}
+
+/* ABOUT */
+.animate-about .wave-img { animation: slideIn 1s ease forwards; }
+
+.animate-about .img-main {
+  animation: zoomIn 0.9s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.animate-about .img-small.top {
+  animation: swapTL 0.8s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.animate-about .img-small.bottom {
+  animation: swapBR 0.8s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.animate-about .experience-box {
+  animation: popBounce 0.8s ease forwards;
+  animation-delay: 0.9s;
+}
+
+.animate-about .about-right h2 {
+  animation: slideRight 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.animate-about .about-desc {
+  animation: fadeUp 0.7s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.animate-about .about-feature:nth-child(1) { animation: fadeUp 0.6s ease forwards; animation-delay: 0.8s; }
+.animate-about .about-feature:nth-child(2) { animation: fadeUp 0.6s ease forwards; animation-delay: 1s; }
+.animate-about .about-feature:nth-child(3) { animation: fadeUp 0.6s ease forwards; animation-delay: 1.2s; }
+
+/* COUNTERS */
+.animate-counters .container > div {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.animate-counters i {
+  animation: iconPop 0.6s ease forwards;
+}
+
+/* SOLUTIONS */
+.animate-solutions .solutions-left {
+  animation: slideLeft 0.8s ease forwards;
+}
+
+.animate-solutions .video-btn {
+  animation: pulsePop 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.animate-solutions .solution-card:nth-child(1) { animation: fadeUp 0.6s ease forwards; animation-delay: 0.3s; }
+.animate-solutions .solution-card:nth-child(2) { animation: fadeUp 0.6s ease forwards; animation-delay: 0.5s; }
+.animate-solutions .solution-card:nth-child(3) { animation: fadeUp 0.6s ease forwards; animation-delay: 0.7s; }
+.animate-solutions .solution-card:nth-child(4) { animation: fadeUp 0.6s ease forwards; animation-delay: 0.9s; }
+
+/* PROCESS */
+.animate-process .bracket-heading {
+  animation: drawLine 0.8s ease forwards;
+}
+
+.animate-process .process-step {
+  animation: stepFlip 0.8s ease forwards;
+}
+
+/* ================================
+   KEYFRAMES
+================================ */
+@keyframes slideIn { to { transform: translateX(0); } }
+@keyframes slideLeft { to { transform: translateX(0); } }
+@keyframes slideRight { to { transform: translateX(0); } }
+@keyframes fadeUp { to { transform: translateY(0); } }
+@keyframes zoomIn { to { transform: scale(1); } }
+
+@keyframes swapTL { to { transform: translate(0,0); } }
+@keyframes swapBR { to { transform: translate(0,0); } }
+
+@keyframes popBounce {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes iconPop { to { transform: scale(1); } }
+
+@keyframes pulsePop {
+  0% { transform: scale(0); }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+@keyframes drawLine { to { transform: scaleX(1); } }
+
+@keyframes stepFlip {
+  to { transform: rotateX(0) translateY(0); }
+}

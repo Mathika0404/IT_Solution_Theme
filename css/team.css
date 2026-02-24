@@ -448,6 +448,14 @@ header{
   color: #fff;
 }
 
+.navbar.scrolled .dropdown-menu li a {
+  color: #000;
+}
+
+.navbar.scrolled .dropdown-menu li a:hover {
+  color: #fff;
+}
+
 /* ===============================
    EXTRA SMALL (360px)
 ================================ */
@@ -547,7 +555,7 @@ header{
 .home{
     min-height: 100vh;
     width: 100vw;
-    background-image: url(../images/img1.webp);
+    background-image: url(../images/img5.jpg);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -744,6 +752,7 @@ header{
     left: -4rem;
 }
 
+
 /*FOOTER STYLE*/
 .modern-footer{
   background:#184f8a;
@@ -897,4 +906,151 @@ header{
 .back-to-top.show{
   opacity: 1;
   visibility: visible;
+}
+
+/* =====================================
+   TEAM SECTION – CLEAN ANIMATION
+===================================== */
+
+/* Initial state */
+.team .heading,
+.team .row .card {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Profile image */
+.team .row .card .image img {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* Text */
+.team .row .card .info h3,
+.team .row .card .info span {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Social icons */
+.team .row .card .icons a {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* ================= ACTIVE STATE ================= */
+
+.team.animate-team .heading {
+  animation: teamHeading 0.6s ease forwards;
+}
+
+/* Cards stagger (works for many cards) */
+.team.animate-team .row .card {
+  animation: cardReveal 0.6s ease forwards;
+}
+
+/* Image */
+.team.animate-team .row .card .image img {
+  animation: imageZoom 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Name & role */
+.team.animate-team .row .card .info h3 {
+  animation: textReveal 0.4s ease forwards;
+  animation-delay: 0.35s;
+}
+
+.team.animate-team .row .card .info span {
+  animation: textReveal 0.4s ease forwards;
+  animation-delay: 0.45s;
+}
+
+/* Icons */
+.team.animate-team .row .card .icons a {
+  animation: iconReveal 0.4s ease forwards;
+}
+
+/* ===============================
+   TEAM IMAGE ROTATE-IN ANIMATION
+================================ */
+
+/* Initial state */
+.team .row .card .image img {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.6);
+  transition: none;
+}
+
+/* Active animation */
+.team.animate-team .row .card .image img {
+  animation: rotateInPlace 0.8s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+}
+
+/* ===============================
+   KEYFRAMES
+================================ */
+@keyframes rotateInPlace {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.6);
+  }
+  70% {
+    opacity: 1;
+    transform: rotate(10deg) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.team.animate-team .row:nth-child(1) .image img { animation-delay: 0.2s; }
+.team.animate-team .row:nth-child(2) .image img { animation-delay: 0.3s; }
+.team.animate-team .row:nth-child(3) .image img { animation-delay: 0.4s; }
+.team.animate-team .row:nth-child(4) .image img { animation-delay: 0.5s; }
+.team.animate-team .row:nth-child(5) .image img { animation-delay: 0.6s; }
+.team.animate-team .row:nth-child(6) .image img { animation-delay: 0.7s; }
+.team.animate-team .row:nth-child(7) .image img { animation-delay: 0.8s; }
+.team.animate-team .row:nth-child(8) .image img { animation-delay: 0.9s; }
+.team.animate-team .row:nth-child(9) .image img { animation-delay: 1s; }
+.team.animate-team .row:nth-child(10) .image img { animation-delay: 1.1s; }
+.team.animate-team .row:nth-child(11) .image img { animation-delay: 1.2s; }
+.team.animate-team .row:nth-child(12) .image img { animation-delay: 1.3s; }
+
+/* ================= KEYFRAMES ================= */
+
+@keyframes teamHeading {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageZoom {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes textReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

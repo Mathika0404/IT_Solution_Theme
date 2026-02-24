@@ -351,6 +351,21 @@ function isValidEmail(email){
   const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return pattern.test(email);
 }
+
+  const careersSection = document.querySelector(".careers-section");
+
+  const careersObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          careersSection.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.35 }
+  );
+
+  careersObserver.observe(careersSection);
 </script>
 
 <script src="./js/script.js"></script>
